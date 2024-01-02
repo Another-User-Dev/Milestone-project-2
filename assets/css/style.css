@@ -13,7 +13,7 @@
 .top_header {
     width: 100%;
     background-color: #4c161d;
-    height: 100px;
+    height: 10vh;
     display: block;
     color: white;
 }
@@ -23,7 +23,7 @@
 .main_page {
     width: 100%;
     background-color: blue;
-    height:  calc(100vh - 100px);;
+    height:  90vh;
     display: block;
     color: white;
     }
