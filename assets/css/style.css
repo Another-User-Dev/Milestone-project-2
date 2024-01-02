@@ -18,6 +18,29 @@
     color: white;
 }
 
+.inner_header {
+    max-width: 80vw;
+    height: 10vh;
+    background-color: white;
+    color:white;
+    margin: 0 auto;
+    display: block;
+}
+
+.logo {
+    background-color: silver;
+    font-size: 1rem;
+    float: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    line-height: 10vh;
+    display: block;
+}
+
+.logo h2 {    
+    color:red;
+}
+
 /*.........style content for main page area............*/
 
 .main_page {
@@ -27,6 +50,48 @@
     display: block;
     color: white;
     }
+
+.main_content_page {
+    max-width: 80vw;
+    height: 90vh;
+    background-color: pink;
+    margin: 0 auto;
+    display: block;
+}
+
+.question_box {
+    margin: 0 auto;
+    position: relative;
+    top: 25px;
+    padding: 10px;
+    height: 150px;
+    width: 200px;
+    border-style: solid;
+    border-color: #16264c;
+    border-width: 2px;
+    border-radius: 8px;
+    }
+
+.flex-container {  
+    height: auto; 
+    display: flex; 
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box {
+    margin-top: 40px;
+    padding: 10px;
+    height: 100px;
+    width: 150px;
+    border-style: solid;
+    border-color: #16264c;
+    border-width: 2px;
+    border-radius: 8px;
+    margin-bottom: 0px;
+}
 
 #end_footer {
     position: absolute;
