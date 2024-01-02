@@ -1,0 +1,38 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*.........styling for the header.........*/
+
+.top_header {
+    width: 100%;
+    background-color: #4c161d;
+    height: 100px;
+    display: block;
+    color: white;
+}
+
+/*.........style content for main page area............*/
+
+.main_page {
+    width: 100%;
+    background-color: blue;
+    height:  calc(100vh - 100px);;
+    display: block;
+    color: white;
+    }
+
+#end_footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    background-color: orange;
+    color: white;
+}
