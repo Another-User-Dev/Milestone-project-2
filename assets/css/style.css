@@ -65,7 +65,7 @@
     top: 25px;
     padding: 10px;
     height: 150px;
-    width: 200px;
+    width: 300px;
     border-style: solid;
     border-color: #16264c;
     border-width: 2px;
@@ -82,10 +82,10 @@
 }
 
 .box {
-    margin-top: 40px;
+    margin-top: 100px;
     padding: 10px;
     height: 100px;
-    width: 150px;
+    width: 200px;
     border-style: solid;
     border-color: #16264c;
     border-width: 2px;
