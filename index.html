@@ -8,10 +8,11 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 
-
 <link rel="stylesheet" href="assets/css/style.css">
     
 <title>Fruit & Vegetable Quiz</title>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
 </head>
 
@@ -22,7 +23,7 @@
     <header>
         <div class="top_header" > 
             <div class="inner_header">
-                <div class="logo"><h2>Fruit & Vegetable Quiz</h2></div>
+                <div class="logo"><h1>Fruit & Vegetable Quiz</h1></div>
 
             </div>
             
@@ -35,18 +36,20 @@
     <div class="main_page">
 
         <div class="main_content_page">
-            <div class="question_box">
-
-            </div>
+            <div class="question_box"></div>
 
             <div class="flex-container">
                 <div class="box A">
+                    <button class="button" data-type="submit" value="a">Answer A</button>
                 </div>
                 <div class="box B">
+                    <button class="button" data-type="submit" value="b">Answer B</button>
                 </div>
                 <div class="box C">
+                    <button class="button" data-type="submit" value="c">Answer C</button>
                 </div>
                 <div class="box D">
+                    <button class="button" data-type="submit" value="d">Answer D</button>
                 </div>
             </div>
         </div>
@@ -57,4 +60,9 @@
             hello
         </footer>
     </div>
+
+    <script src="assets/scripts/game.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </body>
+
+</html>
