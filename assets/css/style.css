@@ -94,6 +94,23 @@
     position: relative;
 }
 
+#card_a, #card_b, #card_c, #card_d  {
+    height: 50%;
+    width: 90%;
+    border: none;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#question_card {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.display_none{
+    display: none;
+}
+
 /*..........styling answer button and position.....*/
 
 .button {
