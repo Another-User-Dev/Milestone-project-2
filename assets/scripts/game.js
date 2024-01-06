@@ -34,8 +34,6 @@ let questionCount = 0;
 let totalQuestion = (questions.length);
 let buttonLetter = "";
 
-
-
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
 
@@ -45,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (buttonLetter === "start") {
                 $("div .welcome").addClass("display_none");
                 $("div .question_box").removeClass("display_none"); 
-                $("div .flex-containercl").removeClass("display_none");                 
+                $("div .flex-container").removeClass("display_none");                 
                 setQuestion();
             }
             else
@@ -128,7 +126,8 @@ function wrongAnswer() {
     
     <h2>Answer is ${buttonLetter}</h2>
     
-    <h2>Your score is ${correctScore} out of ${questionCount}</h2>`;
+    <h2>Your score is ${correctScore} out of ${questionCount}</h2>
+    `;
     
     document.getElementById("scoreResult").innerText = messageScore;
     setTimeout(delayTime(), 4000);
