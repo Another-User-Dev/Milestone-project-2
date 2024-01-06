@@ -7,7 +7,7 @@ var questions = [
     {
     question: 'Which fruit is used to make Cider?',
     options: ['Apple', 'Orange', 'Grapes', 'Kiwi'],
-    answer: 'c',}, 
+    answer: 'a',}, 
     {
     question: 'Which fruit is used to make Wine?',
     options: ['Banana', 'Pineapple', 'Apple', 'Grapes'],
@@ -23,7 +23,7 @@ var questions = [
     {
     question: 'Which vegetable can grow in the dark?',
     options: ['Brussel Sprout', 'Mushroom', 'Cabbage', 'Tomato'],
-    answer: 'd'},
+    answer: 'b'},
 ]
 
 // declaring variables
@@ -32,9 +32,9 @@ let correctScore = 0;
 let wrongScore = 0;
 let questionCount = 0;
 let totalQuestion = (questions.length);
-let buttonLetter ;
+let buttonLetter = "";
 
-setQuestion();
+
 
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
@@ -42,6 +42,13 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let button of buttons) {
         button.addEventListener("click", function() {
             buttonLetter = this.getAttribute("value");
+            if (buttonLetter === "start") {
+                $("div .welcome").addClass("display_none");
+                $("div .question_box").removeClass("display_none"); 
+                $("div .flex-containercl").removeClass("display_none");                 
+                setQuestion();
+            }
+            else
             if (buttonLetter === "a") {
                 checkAnswers();
             }
@@ -61,8 +68,14 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-
 //startGame function() display instruction with start button - hide display for next page - set scores to zero
+
+function startGame(){
+    correctScore = 0;
+    wrongScore = 0;
+    questionCount = 0;
+    //$("div .welcome").addClass("display_none");
+}
 
 // setQuestion function() set questions with answer buttons
 
@@ -80,19 +93,68 @@ function checkAnswers () {
     if (buttonLetter === questions[questionCount].answer) {
         correctScore++ ;
         questionCount++ ;
-        console.log(buttonLetter, correctScore, questionCount); 
+        setTimeout(rightAnswer(), 4000);
         }
     else {
-        console.log('wrong answer');
-        questionCount++ ;          
-    }
-
-    if (totalQuestion === questionCount) {
-        endofGame();        
-    }
+        (buttonLetter !== questions[questionCount].answer)
+        questionCount++ ;                  
+    }   
 }
 
 // display function () correct/wrong answer with running score - set timer - return to game or end if last question
+
+function rightAnswer() {
+    setupScoreboard();
+    let messageScore = `
+    
+    <h2>Correct</h2> 
+    
+    <h2>Answer is ${buttonLetter} </h2>
+    
+    <h2>Your score is ${correctScore} out of ${questionCount} </h2>`;
+    
+    document.getElementById("scoreResult").innerText = messageScore;
+    setTimeout(delayTime(), 4000);
+    if (questionCount === totalQuestion){
+        endofGame();
+    }
+}
+
+function wrongAnswer() {
+    setupScoreboard();
+    let messageScore = `
+    
+    <h2>Wrong</h2> 
+    
+    <h2>Answer is ${buttonLetter}</h2>
+    
+    <h2>Your score is ${correctScore} out of ${questionCount}</h2>`;
+    
+    document.getElementById("scoreResult").innerText = messageScore;
+    setTimeout(delayTime(), 4000);
+    if (questionCount === totalQuestion){
+        endofGame();
+    }
+    closeScoreboard();
+}
+
+function setupScoreboard(){
+    // Set up relevant display board showing score
+    $("div .question_box").addClass("display_none");
+    $("div .flex-container").addClass("display_none");    
+    $("div .replyAnswer").removeClass("display_none");
+}
+
+function closeScoreboard(){
+    // Set up relevant display board showing score
+    $("div .question_box").removeClass("display_none");
+    $("div .flex-container").removeClass("display_none");    
+    $("div .replyAnswer").addClass("display_none");
+}
+
+function delayTime(){
+    console.log('pause')
+}
 
 // endofGame function () notifying end of game, number of questions correctly answered with button to restart quiz
 

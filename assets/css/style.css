@@ -56,7 +56,20 @@
     height: 90vh;
     background-color: pink;
     margin: 0 auto;
-    display: block;
+}
+
+.welcome {
+    margin: 0 auto;
+    text-align: center;
+    color: black;
+    top: 25px;
+    padding: 10px;
+    height: 300px;
+    width: 300px;
+    border-style: none;
+    border-color: none;
+    border-width: 2px;
+    border-radius: 8px;
 }
 
 .question_box {
@@ -107,6 +120,17 @@
     font-size: 2rem;
 }
 
+.replyAnswer {
+    position: relative;
+    margin: auto;
+    padding-top: 10px;
+    top: 10%;
+    height: 400px;
+    width: 50%;
+    background-color: aqua;
+    border: none;
+}
+
 .display_none{
     display: none;
 }
@@ -126,5 +150,3 @@
     background-color: orange;
     color: white;
 }
-
-
