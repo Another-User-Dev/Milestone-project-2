@@ -131,7 +131,7 @@
     border: none;
 }
 
-.display_none{
+.display_none {
     display: none;
 }
 
@@ -142,6 +142,7 @@
     bottom: 10%;
     left: 35%;
 }
+
 #end_footer {
     position: absolute;
     bottom: 0;

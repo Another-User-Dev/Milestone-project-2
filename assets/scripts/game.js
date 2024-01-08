@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //startGame function() display instruction with start button - hide display for next page - set scores to zero
 
-function startGame(){
+function startGame() {
     correctScore = 0;
     wrongScore = 0;
     questionCount = 0;
@@ -91,11 +91,11 @@ function checkAnswers () {
     if (buttonLetter === questions[questionCount].answer) {
         correctScore++ ;
         questionCount++ ;
-        setTimeout(rightAnswer(), 4000);
-        }
-    else {
-        (buttonLetter !== questions[questionCount].answer)
-        questionCount++ ;                  
+        alert('check right answer');
+        rightAnswer();       
+    } else 
+    if  (buttonLetter !== questions[questionCount].answer) {
+        questionCount++ ;               
     }   
 }
 
@@ -103,60 +103,53 @@ function checkAnswers () {
 
 function rightAnswer() {
     setupScoreboard();
-    let messageScore = `
-    
-    <h2>Correct</h2> 
-    
-    <h2>Answer is ${buttonLetter} </h2>
-    
-    <h2>Your score is ${correctScore} out of ${questionCount} </h2>`;
-    
-    document.getElementById("scoreResult").innerText = messageScore;
-    setTimeout(delayTime(), 4000);
-    if (questionCount === totalQuestion){
-        endofGame();
+    let messageScore = `<h2> Correct <br><br> Answer is ${buttonLetter} <br><br>   
+    Your score is ${correctScore} out of ${questionCount} </h2>`;    
+    document.getElementById("scoreResult").innerHTML = messageScore;    
+    if (questionCount > totalQuestion) {
+        alert('end of game');
+        }    
+    //closeScoreboard();
+    alert('should return from closeScoreboard fn');
+    //setQuestion();
     }
-}
 
 function wrongAnswer() {
     setupScoreboard();
-    let messageScore = `
-    
-    <h2>Wrong</h2> 
-    
-    <h2>Answer is ${buttonLetter}</h2>
-    
+    let messageScore = `  
+    <h2>Wrong</h2>
+    <h2>Answer is ${buttonLetter}</h2>  
     <h2>Your score is ${correctScore} out of ${questionCount}</h2>
     `;
-    
     document.getElementById("scoreResult").innerText = messageScore;
-    setTimeout(delayTime(), 4000);
+    alert('wrong  answer');
     if (questionCount === totalQuestion){
         endofGame();
     }
-    closeScoreboard();
 }
 
-function setupScoreboard(){
+function setupScoreboard() {
     // Set up relevant display board showing score
-    $("div .question_box").addClass("display_none");
-    $("div .flex-container").addClass("display_none");    
-    $("div .replyAnswer").removeClass("display_none");
+    alert('set up score board')
+    $(".question_box").toggleClass("display_none");
+    $(".flex-container").toggleClass("display_none");    
+    $(".replyAnswer").toggleClass("display_none");
+    $(".replyAnswer).append("<button id='next_question'>Next Question</button>"
 }
 
-function closeScoreboard(){
+function closeScoreboard() {
     // Set up relevant display board showing score
-    $("div .question_box").removeClass("display_none");
-    $("div .flex-container").removeClass("display_none");    
-    $("div .replyAnswer").addClass("display_none");
+    $(".question_box").toggleClass("display_none");
+    $(".flex-container").toggleClass("display_none");    
+    $(".replyAnswer").toggleClass("display_none");         
 }
 
-function delayTime(){
+function delayTime() {
     console.log('pause')
 }
 
 // endofGame function () notifying end of game, number of questions correctly answered with button to restart quiz
 
 function endofGame() {
-    console.log('end game');
+    alert('end of game')
 }
