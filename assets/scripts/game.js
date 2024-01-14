@@ -43,7 +43,8 @@ document.addEventListener("DOMContentLoaded", function() {
             if (buttonLetter === "start") {
                 $("div .welcome").addClass("display_none");
                 $("div .question_box").removeClass("display_none"); 
-                $("div .flex-container").removeClass("display_none");                 
+                $("div .flex-container").removeClass("display_none"); 
+                $("div.score_board").toggleClass("display_none");                
                 setQuestion();
             }
             else
@@ -131,17 +132,16 @@ function wrongAnswer() {
 function setupScoreboard() {
     // Set up relevant display board showing score
     alert('set up score board')
-    $(".question_box").toggleClass("display_none");
-    $(".flex-container").toggleClass("display_none");    
-    $(".replyAnswer").toggleClass("display_none");
-    $(".replyAnswer).append("<button id='next_question'>Next Question</button>"
+    $("div.question_box").toggleClass("display_none");
+    $("div.flex-container").toggleClass("display_none");    
+    $("div.replyAnswer").toggleClass("display_none");
 }
 
 function closeScoreboard() {
     // Set up relevant display board showing score
     $(".question_box").toggleClass("display_none");
     $(".flex-container").toggleClass("display_none");    
-    $(".replyAnswer").toggleClass("display_none");         
+    $("div.replyAnswer").toggleClass("display_none");         
 }
 
 function delayTime() {

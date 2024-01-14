@@ -33,49 +33,57 @@
 
     <!-- Middle part for website -->
     
-    <div class="main_page">
+<div class="main_page">
 
-        <div class="main_content_page">
+    <div class="main_content_page">
 
-            <div class="welcome">
+        <div class="welcome">
+            <br>
+            <br>
+            <h2>Welcome to Fruit & Vegetable Quiz</h2>
+                <br>
+            <h3>Answer the questions by clicking on one</h3>
+            <h3>of the buttons labelled A to D</h3>
                 <br>
                 <br>
-                <h2>Welcome to Fruit & Vegetable Quiz</h2>
-                    <br>
-                <h3>Answer the questions by clicking on one</h3>
-                <h3>of the buttons labelled A to D</h3>
-                    <br>
-                    <br>
-                <button class="button1" data-type="submit" value="start">Start</button>
-            </div>        
+            <button class="button1" data-type="submit" value="start">Start</button>
+        </div>
 
-            <div class="question_box display_none" id="question_card"></div>
+        <!-- Score board header-->
+        
+        <div class="score_board display_none">
+            <div class="score_board_left"><h1>Current score:</h1></div>
+            <div class="score_board_right"><h1>Current score:</h1></div>
+            
+        </div>
+        
+        <div class="question_box display_none" id="question_card"></div>           
 
-                <div class="flex-container display_none">
-                    <div class="box A">
-                        <button class="button" data-type="submit" value="a">Answer A</button>
-                            <div id="card_a"></div>
-                    </div>
-                    <div class="box B">
-                        <button class="button" data-type="submit" value="b">Answer B</button>
-                            <div id="card_b"></div>
-                    </div>
-                    <div class="box C" id="c">
-                        <button class="button" data-type="submit" value="c">Answer C</button>
-                        <div id="card_c"></div>
-                    </div>
-                    <div class="box D" id="d">
-                        <button class="button" data-type="submit" value="d">Answer D</button>
-                        <div id="card_d"></div>
-                    </div>
+            <div class="flex-container display_none">
+                <div class="box A">
+                    <button class="button" data-type="submit" value="a">Answer A</button>
+                        <div id="card_a"></div>
                 </div>
-
-            <div class="replyAnswer display_none" id="scoreResult" >
-
-                <div><button class="button2" data-type="submit" value="d">Next Question</button></div>
-                
+                <div class="box B">
+                    <button class="button" data-type="submit" value="b">Answer B</button>
+                        <div id="card_b"></div>
+                </div>
+                <div class="box C" id="c">
+                    <button class="button" data-type="submit" value="c">Answer C</button>
+                    <div id="card_c"></div>
+                </div>
+                <div class="box D" id="d">
+                    <button class="button" data-type="submit" value="d">Answer D</button>
+                    <div id="card_d"></div>
+                </div>
             </div>
-        </div>       
+
+        <div class="replyAnswer display_none" id="scoreResult" >
+
+            <div><button id = "button2" data-type="submit" value="d">Next Question</button></div>
+            
+        </div>
+    </div>       
             
     <!-- Footer for website -->
 

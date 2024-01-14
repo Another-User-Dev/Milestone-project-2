@@ -72,13 +72,34 @@
     border-radius: 8px;
 }
 
+.score_board {
+    height: 2rem;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+.score_board_left {
+    float: left;
+    height: 2rem;
+    width: 50%;
+    background-color: red;
+}
+
+.score_board_right {
+    float: left;
+    height: 2rem;
+    width: 50%;
+    background-color: purple;
+}
+
 .question_box {
     margin: 0 auto;
     position: relative;
-    top: 25px;
     padding: 10px;
+    top: 60px;
     height: 150px;
-    width: 300px;
+    width: 75%;
     border-style: solid;
     border-color: #16264c;
     border-width: 2px;
@@ -98,7 +119,7 @@
     margin-top: 100px;
     padding: 10px;
     height: 100px;
-    width: 200px;
+    width: 75%;
     border-style: solid;
     border-color: #16264c;
     border-width: 2px;
@@ -150,4 +171,8 @@
     height: 25px;
     background-color: orange;
     color: white;
+}
+
+.replyAnswer {
+    background-color: cornflowerblue;
 }
