@@ -33,6 +33,7 @@ let wrongScore = 0;
 let questionCount = 0;
 let totalQuestion = (questions.length);
 let buttonLetter = "";
+let cardLetter = "";
 
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
@@ -47,33 +48,30 @@ document.addEventListener("DOMContentLoaded", function() {
                 $("div.score_board").toggleClass("display_none");                
                 setQuestion();
             }
-            else if 
-                (buttonLetter === "a") {
-                checkAnswers();
-            }
-            else
-            if (buttonLetter === "b") {
-                checkAnswers();
-            }
-            else
-            if (buttonLetter === "c") {
-                checkAnswers();
-            }
-            else
-            if (buttonLetter === "d") {
-                checkAnswers();
-            }
         });            
     }
 });
 
-let cards = document.getElementsByClassName("box");
+document.addEventListener("DOMContentLoaded", function() {
 
-for (let card of cards) {
-    card.addEventListener("click", function() {
-        console.log ('it is a div');
-    })
-};
+    let cards = document.getElementsByClassName("box");
+
+    for (let card of cards) {
+        card.addEventListener("click", function() {
+            cardLetter = this.dataset.id;       
+            if  (cardLetter === "a") {
+                console.log(cardLetter);
+                checkAnswers();
+            } else if (cardLetter === "b") {
+                checkAnswers();
+            } else if (cardLetter === "c") {
+                checkAnswers();
+            } else if (cardLetter === "d") {
+                checkAnswers();
+            }
+        });
+    }   
+});
 
 //startGame function() display instruction with start button - hide display for next page - set scores to zero
 
@@ -97,13 +95,13 @@ function setQuestion() {
 // check if button = right answer add score
 
 function checkAnswers () {
-    if (buttonLetter === questions[questionCount].answer) {
+    if (cardLetter === questions[questionCount].answer) {
         correctScore++ ;
         questionCount++ ;
         alert('check right answer');
         rightAnswer();       
     } else 
-    if  (buttonLetter !== questions[questionCount].answer) {
+    if  (cardLetter !== questions[questionCount].answer) {
         questionCount++ ;               
     }   
 }
