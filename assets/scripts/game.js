@@ -92,6 +92,9 @@ function startGame() {
 // setQuestion function() set questions with answer buttons
 
 function setQuestion() {
+    if (questionCount = totalQuestion) {
+        alert('end of game');
+        }
     document.getElementById("question_card").innerText = questions[questionCount].question;
     document.getElementById("card_a").innerText = questions[questionCount].options[0];
     document.getElementById("card_b").innerText = questions[questionCount].options[1];
@@ -105,12 +108,10 @@ function checkAnswers () {
     if (cardLetter === questions[questionCount].answer) {
         correctScore++ ;
         questionCount++ ;
-        alert('check right answer');
         rightAnswer();       
     } else if (cardLetter !== questions[questionCount].answer) {
         questionCount++; 
-        wrongAnswer();
-        alert('wrong answer');              
+        wrongAnswer();              
     }   
 }
 
@@ -120,10 +121,8 @@ function rightAnswer() {
     setup_question_feedback_box_right();
     let messageScore = `<h2> Correct <br><br> Answer is ${buttonLetter} <br><br>   
     Your score is ${correctScore} out of ${questionCount} </h2>`;    
-    document.getElementById("scoreResult").innerHTML = messageScore;    
-    if (questionCount > totalQuestion) {
-        alert('end of game');
-        }
+    document.getElementById("scoreResult").innerHTML = messageScore;   
+    
     }
 
 function wrongAnswer() {
@@ -134,8 +133,7 @@ function wrongAnswer() {
     <h2>Your score is ${correctScore} out of ${questionCount}</h2>
     `;
     document.getElementById("scoreResult").innerText = messageScore;
-    alert('wrong  answer');
-    if (questionCount === totalQuestion){
+    if (questionCount > totalQuestion){
         endofGame();
     }
 }
