@@ -43,11 +43,16 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let button of buttons) {
         button.addEventListener("click", function() {
             buttonLetter = this.getAttribute("value");
-            if (buttonLetter === "start") {
+            if (buttonLetter === "s") {
                 $("div .welcome").addClass("display_none");
                 $("div .question_box").removeClass("display_none"); 
                 $("div .flex-container").removeClass("display_none"); 
                 $("div.score_board").toggleClass("display_none");                
+                setQuestion();
+            } else if (buttonLetter === "n") {
+                close_question_feedback_box_right();
+                close_question_feedback_box_wrong();
+                resetFontawesome();
                 setQuestion();
             }
         });            
@@ -102,9 +107,10 @@ function checkAnswers () {
         questionCount++ ;
         alert('check right answer');
         rightAnswer();       
-    } else 
-    if  (cardLetter !== questions[questionCount].answer) {
-        questionCount++ ;               
+    } else if (cardLetter !== questions[questionCount].answer) {
+        questionCount++; 
+        wrongAnswer();
+        alert('wrong answer');              
     }   
 }
 
@@ -117,14 +123,11 @@ function rightAnswer() {
     document.getElementById("scoreResult").innerHTML = messageScore;    
     if (questionCount > totalQuestion) {
         alert('end of game');
-        }    
-    //closeScoreboard();
-    alert('should return from closeScoreboard fn');
-    //setQuestion();
+        }
     }
 
 function wrongAnswer() {
-    setupScoreboard();
+    setup_question_feedback_box_wrong();
     let messageScore = `  
     <h2>Wrong</h2>
     <h2>Answer is ${buttonLetter}</h2>  
@@ -145,6 +148,30 @@ function setup_question_feedback_box_right() {
       });
 }
 
+function close_question_feedback_box_right() {
+    // Set up relevant display board showing feedback to user    
+    $(document).ready(function(){
+        $(".question_feedback_box").addClass("display_none");
+        $(".tick").addClass("display_none");        
+      });
+}
+
+function setup_question_feedback_box_wrong() {
+    // Set up relevant display board showing feedback to user    
+    $(document).ready(function(){
+        $(".question_feedback_box").removeClass("display_none");
+        $(".xmark").removeClass("display_none");        
+      });
+}
+
+function close_question_feedback_box_wrong() {
+    // Set up relevant display board showing feedback to user    
+    $(document).ready(function(){
+        $(".question_feedback_box").addClass("display_none");
+        $(".xmark").addClass("display_none");        
+      });
+}
+
 function closeScoreboard() {
     // Set up relevant display board showing score
     $(".question_box").toggleClass("display_none");
@@ -152,10 +179,13 @@ function closeScoreboard() {
     $("div.replyAnswer").toggleClass("display_none");         
 }
 
-function delayTime() {
-    console.log('pause')
-}
+function resetFontawesome(){
+    $(document).ready(function(){
+        $(".tick").toggleClassClass("display_none", true); 
+        $(".xmark").toggleClassClass("display_none", true);        
+      });
 
+}
 // endofGame function () notifying end of game, number of questions correctly answered with button to restart quiz
 
 function endofGame() {
