@@ -73,7 +73,7 @@
 }
 
 .score_board {
-    height: 2rem;
+    height: 4rem;
     width: 100%;
     background-color: black;
     color: white;
@@ -81,14 +81,15 @@
 
 .score_board_left {
     float: left;
-    height: 2rem;
+    height: 4rem;
     width: 50%;
     background-color: red;
 }
 
 .score_board_right {
     float: left;
-    height: 2rem;
+    text-align: right;
+    height: 4rem;
     width: 50%;
     background-color: purple;
 }
