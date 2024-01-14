@@ -160,6 +160,28 @@
     display: none;
 }
 
+/*...........question feedback box .........*/
+
+.question_feedback_box {
+    margin: auto;
+    padding-left: 4rem;
+    margin-top: 25px;
+    height: 12rem;
+    width: 75%;
+    border-color: black;
+    background-color: orange;
+}
+
+.quiz_ended {
+    margin: auto;
+    padding-left: 4rem;
+    margin-top: 25px;
+    height: 12rem;
+    width: 75%;
+    border-color: black;
+    background-color: orange;
+}
+
 /*..........styling answer button and position.....*/
 
 .button {
