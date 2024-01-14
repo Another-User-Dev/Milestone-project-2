@@ -3,7 +3,7 @@
 
 // data for questions
 
-var questions = [
+const questions = [
     {
     question: 'Which fruit is used to make Cider?',
     options: ['Apple', 'Orange', 'Grapes', 'Kiwi'],
@@ -36,7 +36,7 @@ let buttonLetter = "";
 
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
-
+  
     for (let button of buttons) {
         button.addEventListener("click", function() {
             buttonLetter = this.getAttribute("value");
@@ -47,8 +47,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 $("div.score_board").toggleClass("display_none");                
                 setQuestion();
             }
-            else
-            if (buttonLetter === "a") {
+            else if 
+                (buttonLetter === "a") {
                 checkAnswers();
             }
             else
@@ -66,6 +66,14 @@ document.addEventListener("DOMContentLoaded", function() {
         });            
     }
 });
+
+let cards = document.getElementsByClassName("box");
+
+for (let card of cards) {
+    card.addEventListener("click", function() {
+        console.log ('it is a div');
+    })
+};
 
 //startGame function() display instruction with start button - hide display for next page - set scores to zero
 
