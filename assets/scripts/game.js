@@ -1,5 +1,4 @@
-// Wait for the DOM to finish loading before running the game
-// Get the button elements and add event listeners to them
+
 
 // data for questions
 
@@ -34,6 +33,9 @@ let questionCount = 0;
 let totalQuestion = (questions.length);
 let buttonLetter = "";
 let cardLetter = "";
+
+// Wait for the DOM to finish loading before running the game
+// Get the button elements and add event listeners to them
 
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
@@ -109,7 +111,7 @@ function checkAnswers () {
 // display function () correct/wrong answer with running score - set timer - return to game or end if last question
 
 function rightAnswer() {
-    setupScoreboard();
+    setup_question_feedback_box_right();
     let messageScore = `<h2> Correct <br><br> Answer is ${buttonLetter} <br><br>   
     Your score is ${correctScore} out of ${questionCount} </h2>`;    
     document.getElementById("scoreResult").innerHTML = messageScore;    
@@ -135,12 +137,12 @@ function wrongAnswer() {
     }
 }
 
-function setupScoreboard() {
-    // Set up relevant display board showing score
-    alert('set up score board')
-    $("div.question_box").toggleClass("display_none");
-    $("div.flex-container").toggleClass("display_none");    
-    $("div.replyAnswer").toggleClass("display_none");
+function setup_question_feedback_box_right() {
+    // Set up relevant display board showing feedback to user    
+    $(document).ready(function(){
+        $(".question_feedback_box").removeClass("display_none");
+        $(".tick").removeClass("display_none");        
+      });
 }
 
 function closeScoreboard() {
