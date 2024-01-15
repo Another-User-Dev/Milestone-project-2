@@ -29,8 +29,9 @@ const questions = [
 
 let correctScore = 0;
 let wrongScore = 0;
-let questionCount = 0;
-let totalQuestion = (questions.length);
+var questionCount = 0;
+const totalQuestion = (questions.length);
+console.log('number of questions line 34', totalQuestion);
 let buttonLetter = "";
 let cardLetter = "";
 
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            buttonLetter = this.getAttribute("value");
+            buttonLetter = this.getAttribute("data-type");
             if (buttonLetter === "s") {
                 $("div .welcome").addClass("display_none");
                 $("div .question_box").removeClass("display_none"); 
@@ -53,7 +54,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 close_question_feedback_box_right();
                 close_question_feedback_box_wrong();
                 resetFontawesome();
-                setQuestion();
+                checkCount();
+                    if (questionCount < totalQuestion) {
+                        setQuestion(); 
+                    } else {
+                        endofQuiz();
+                    }
             }
         });            
     }
@@ -67,7 +73,6 @@ document.addEventListener("DOMContentLoaded", function() {
         card.addEventListener("click", function() {
             cardLetter = this.dataset.id;       
             if  (cardLetter === "a") {
-                console.log(cardLetter);
                 checkAnswers();
             } else if (cardLetter === "b") {
                 checkAnswers();
@@ -92,9 +97,6 @@ function startGame() {
 // setQuestion function() set questions with answer buttons
 
 function setQuestion() {
-    if (questionCount = totalQuestion) {
-        alert('end of game');
-        }
     document.getElementById("question_card").innerText = questions[questionCount].question;
     document.getElementById("card_a").innerText = questions[questionCount].options[0];
     document.getElementById("card_b").innerText = questions[questionCount].options[1];
@@ -118,12 +120,8 @@ function checkAnswers () {
 // display function () correct/wrong answer with running score - set timer - return to game or end if last question
 
 function rightAnswer() {
-    setup_question_feedback_box_right();
-    let messageScore = `<h2> Correct <br><br> Answer is ${buttonLetter} <br><br>   
-    Your score is ${correctScore} out of ${questionCount} </h2>`;    
-    document.getElementById("scoreResult").innerHTML = messageScore;   
-    
-    }
+    setup_question_feedback_box_right(); 
+}
 
 function wrongAnswer() {
     setup_question_feedback_box_wrong();
@@ -133,9 +131,6 @@ function wrongAnswer() {
     <h2>Your score is ${correctScore} out of ${questionCount}</h2>
     `;
     document.getElementById("scoreResult").innerText = messageScore;
-    if (questionCount > totalQuestion){
-        endofGame();
-    }
 }
 
 function setup_question_feedback_box_right() {
@@ -177,15 +172,17 @@ function closeScoreboard() {
     $("div.replyAnswer").toggleClass("display_none");         
 }
 
-function resetFontawesome(){
+function resetFontawesome() {
     $(document).ready(function(){
-        $(".tick").toggleClassClass("display_none", true); 
-        $(".xmark").toggleClassClass("display_none", true);        
+        $(".tick").toggleClass("display_none", true); 
+        $(".xmark").toggleClass("display_none", true);        
       });
-
 }
-// endofGame function () notifying end of game, number of questions correctly answered with button to restart quiz
 
-function endofGame() {
-    alert('end of game')
+function checkCount() {
+        console.log(questionCount)
+}
+
+function endofQuiz() {
+    alert('game over')
 }
