@@ -23,7 +23,7 @@ const questions = [
     question: 'Which vegetable can grow in the dark?',
     options: ['Brussel Sprout', 'Mushroom', 'Cabbage', 'Tomato'],
     answer: 'b'},
-]
+];
 
 // declaring variables
 
@@ -60,6 +60,10 @@ document.addEventListener("DOMContentLoaded", function() {
                     } else {
                         endofQuiz();
                     }
+            } else if (buttonLetter === "r") {
+                close_endofQuiz();
+                restartGame();
+
             }
         });            
     }
@@ -87,10 +91,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //startGame function() display instruction with start button - hide display for next page - set scores to zero
 
-function startGame() {
+function restartGame() {
     correctScore = 0;
     wrongScore = 0;
     questionCount = 0;
+    setQuestion()
     //$("div .welcome").addClass("display_none");
 }
 
@@ -125,12 +130,6 @@ function rightAnswer() {
 
 function wrongAnswer() {
     setup_question_feedback_box_wrong();
-    let messageScore = `  
-    <h2>Wrong</h2>
-    <h2>Answer is ${buttonLetter}</h2>  
-    <h2>Your score is ${correctScore} out of ${questionCount}</h2>
-    `;
-    document.getElementById("scoreResult").innerText = messageScore;
 }
 
 function setup_question_feedback_box_right() {
@@ -180,9 +179,17 @@ function resetFontawesome() {
 }
 
 function checkCount() {
-        console.log(questionCount)
+        console.log(questionCount);
 }
 
 function endofQuiz() {
-    alert('game over')
+    $(document).ready(function(){
+        $(".quiz_ended").removeClass("display_none");            
+    });
+}
+
+function close_endofQuiz() {
+    $(document).ready(function(){
+        $(".quiz_ended").addClass("display_none");            
+    });
 }
