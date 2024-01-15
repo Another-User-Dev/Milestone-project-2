@@ -34,6 +34,7 @@ const totalQuestion = (questions.length);
 const correctedIndex = 1;
 let buttonLetter = "";
 let cardLetter = "";
+let enableOptions = true;
 
 setQuestion();
 set_displayScoreboard();
@@ -52,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     resetFontawesome();
                     close_question_feedback_box_right();
                     close_question_feedback_box_wrong();
+                    enableOptions = true;
                     
                 if (questionCount < totalQuestion) {
                     setScoreboard();                        
@@ -68,24 +70,23 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });            
     }
-});
-
-document.addEventListener("DOMContentLoaded", function() {
 
     let cards = document.getElementsByClassName("box");
-    console.log(cards);
+
     for (let card of cards) {
         card.addEventListener("click", function() {
-            cardLetter = this.dataset.id;
-            this.style.borderLeft  = "16px solid blue";    
-            if  (cardLetter === "a") {
-                checkAnswers();
-            } else if (cardLetter === "b") {
-                checkAnswers();
-            } else if (cardLetter === "c") {
-                checkAnswers();
-            } else if (cardLetter === "d") {
-                checkAnswers();
+            if (enableOptions) {
+                cardLetter = this.dataset.id;
+                this.style.borderLeft  = "16px solid blue";    
+                if  (cardLetter === "a") {
+                    checkAnswers();
+                } else if (cardLetter === "b") {
+                    checkAnswers();
+                } else if (cardLetter === "c") {
+                    checkAnswers();
+                } else if (cardLetter === "d") {
+                    checkAnswers();
+                }
             }
         });
     }   
@@ -123,6 +124,7 @@ function setScoreboard() {
 // check if button = right answer add score
 
 function checkAnswers () {
+    enableOptions = false
     if (cardLetter === questions[questionCount].answer) {
         correctScore++;
         questionCount++;
@@ -180,7 +182,7 @@ function setup_question_feedback_box_wrong() {
       });
 }
 
-// Set up relevant display board showing feedback to user
+// lose relevant display board showing feedback to user
 
 function close_question_feedback_box_wrong() {       
     $(document).ready(function(){
