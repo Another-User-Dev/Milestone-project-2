@@ -208,19 +208,6 @@ function reset_answer_cards() {
     });    
 }
 
-// remove listener from cards as it was possible to select several cards instead of one
-
-function remove_card_listener() {
-    document.addEventListener("DOMContentLoaded", function() {
-        let cards = document.getElementsByClassName("box");
-        for (let card of cards) {
-            card.removeEventListener("click", function() {
-                console.log(cards);
-            });
-        }   
-    });
-}
-
 // open end of quiz section to see final score with option to replay quiz
 
 function endofQuiz() {
