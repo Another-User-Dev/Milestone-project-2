@@ -31,7 +31,6 @@ let correctScore = 0;
 let wrongScore = 0;
 var questionCount = 0;
 const totalQuestion = (questions.length);
-console.log('number of questions line 34', totalQuestion);
 let buttonLetter = "";
 let cardLetter = "";
 
@@ -54,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 close_question_feedback_box_right();
                 close_question_feedback_box_wrong();
                 resetFontawesome();
-                checkCount();
                     if (questionCount < totalQuestion) {
                         setQuestion(); 
                     } else {
@@ -63,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if (buttonLetter === "r") {
                 close_endofQuiz();
                 restartGame();
-
             }
         });            
     }
@@ -95,8 +92,8 @@ function restartGame() {
     correctScore = 0;
     wrongScore = 0;
     questionCount = 0;
-    setQuestion()
-    //$("div .welcome").addClass("display_none");
+    setQuestion();
+
 }
 
 // setQuestion function() set questions with answer buttons
@@ -113,16 +110,17 @@ function setQuestion() {
 
 function checkAnswers () {
     if (cardLetter === questions[questionCount].answer) {
-        correctScore++ ;
-        questionCount++ ;
+        correctScore++;
+        questionCount++;
         rightAnswer();       
     } else if (cardLetter !== questions[questionCount].answer) {
-        questionCount++; 
+        questionCount++;
+        wrongScore++; 
         wrongAnswer();              
     }   
 }
 
-// display function () correct/wrong answer with running score - set timer - return to game or end if last question
+// The two functions below give feedback on answered questions
 
 function rightAnswer() {
     setup_question_feedback_box_right(); 
@@ -132,44 +130,44 @@ function wrongAnswer() {
     setup_question_feedback_box_wrong();
 }
 
-function setup_question_feedback_box_right() {
-    // Set up relevant display board showing feedback to user    
+// Set up relevant display board showing feedback to user 
+
+function setup_question_feedback_box_right() {       
     $(document).ready(function(){
         $(".question_feedback_box").removeClass("display_none");
         $(".tick").removeClass("display_none");        
       });
 }
+    
+// Set up relevant display board showing feedback to user 
 
 function close_question_feedback_box_right() {
-    // Set up relevant display board showing feedback to user    
+       
     $(document).ready(function(){
         $(".question_feedback_box").addClass("display_none");
         $(".tick").addClass("display_none");        
       });
 }
 
-function setup_question_feedback_box_wrong() {
-    // Set up relevant display board showing feedback to user    
+// Set up relevant display board showing feedback to user  
+
+function setup_question_feedback_box_wrong() {  
     $(document).ready(function(){
         $(".question_feedback_box").removeClass("display_none");
         $(".xmark").removeClass("display_none");        
       });
 }
 
-function close_question_feedback_box_wrong() {
-    // Set up relevant display board showing feedback to user    
+// Set up relevant display board showing feedback to user
+
+function close_question_feedback_box_wrong() {       
     $(document).ready(function(){
         $(".question_feedback_box").addClass("display_none");
         $(".xmark").addClass("display_none");        
       });
 }
 
-function closeScoreboard() {
-    // Set up relevant display board showing score
-    $(".question_box").toggleClass("display_none");
-    $(".flex-container").toggleClass("display_none");    
-    $("div.replyAnswer").toggleClass("display_none");         
-}
+// reset Fontawesome to default value
 
 function resetFontawesome() {
     $(document).ready(function(){
@@ -178,10 +176,7 @@ function resetFontawesome() {
       });
 }
 
-function checkCount() {
-        console.log(questionCount);
-}
-
+// open end of quiz section with option to replay quiz and see final score
 function endofQuiz() {
     $(document).ready(function(){
         $(".quiz_ended").removeClass("display_none");            
