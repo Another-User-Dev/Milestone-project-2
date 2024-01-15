@@ -29,10 +29,15 @@ const questions = [
 
 let correctScore = 0;
 let wrongScore = 0;
-var questionCount = 0;
+let questionCount = 0;
 const totalQuestion = (questions.length);
+const correctedIndex = 1;
 let buttonLetter = "";
 let cardLetter = "";
+
+setQuestion();
+set_displayScoreboard();
+setScoreboard(); 
 
 // Wait for the DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
@@ -42,24 +47,23 @@ document.addEventListener("DOMContentLoaded", function() {
   
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            buttonLetter = this.getAttribute("data-type");
-            if (buttonLetter === "s") {
-                $("div .welcome").addClass("display_none");
-                $("div .question_box").removeClass("display_none"); 
-                $("div .flex-container").removeClass("display_none"); 
-                $("div.score_board").toggleClass("display_none");                
-                setQuestion();
-            } else if (buttonLetter === "n") {
-                close_question_feedback_box_right();
-                close_question_feedback_box_wrong();
-                resetFontawesome();
-                    if (questionCount < totalQuestion) {
-                        setQuestion(); 
-                    } else {
-                        endofQuiz();
-                    }
+            buttonLetter = this.getAttribute("data-type");           
+                if (buttonLetter === "n") {
+                    resetFontawesome();
+                    close_question_feedback_box_right();
+                    close_question_feedback_box_wrong();
+                    
+                if (questionCount < totalQuestion) {
+                    setScoreboard();                        
+                    setQuestion();
+                    reset_answer_cards();
+                } else {
+                    document.getElementById("current_score").textContent = correctScore;
+                    endofQuiz();
+                }
             } else if (buttonLetter === "r") {
                 close_endofQuiz();
+                reset_answer_cards();
                 restartGame();
             }
         });            
@@ -69,10 +73,11 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
 
     let cards = document.getElementsByClassName("box");
-
+    console.log(cards);
     for (let card of cards) {
         card.addEventListener("click", function() {
-            cardLetter = this.dataset.id;       
+            cardLetter = this.dataset.id;
+            this.style.borderLeft  = "16px solid blue";    
             if  (cardLetter === "a") {
                 checkAnswers();
             } else if (cardLetter === "b") {
@@ -93,7 +98,7 @@ function restartGame() {
     wrongScore = 0;
     questionCount = 0;
     setQuestion();
-
+    setScoreboard();
 }
 
 // setQuestion function() set questions with answer buttons
@@ -104,7 +109,16 @@ function setQuestion() {
     document.getElementById("card_b").innerText = questions[questionCount].options[1];
     document.getElementById("card_c").innerText = questions[questionCount].options[2];
     document.getElementById("card_d").innerText = questions[questionCount].options[3];
-    }
+    reset_answer_cards();    
+}
+
+// set Score board data
+
+function setScoreboard() {
+    document.getElementById("current_score").textContent = correctScore;
+    document.getElementById("question_index").textContent = (questionCount + correctedIndex);
+    document.getElementById("numberofquestions").textContent = totalQuestion;
+}
 
 // check if button = right answer add score
 
@@ -112,7 +126,7 @@ function checkAnswers () {
     if (cardLetter === questions[questionCount].answer) {
         correctScore++;
         questionCount++;
-        rightAnswer();       
+        rightAnswer();
     } else if (cardLetter !== questions[questionCount].answer) {
         questionCount++;
         wrongScore++; 
@@ -130,13 +144,21 @@ function wrongAnswer() {
     setup_question_feedback_box_wrong();
 }
 
+// Show header score board
+
+function set_displayScoreboard() {       
+    $(document).ready(function(){
+        $(".score_board").removeClass("display_none");        
+    });
+}
+
 // Set up relevant display board showing feedback to user 
 
 function setup_question_feedback_box_right() {       
     $(document).ready(function(){
         $(".question_feedback_box").removeClass("display_none");
         $(".tick").removeClass("display_none");        
-      });
+    });
 }
     
 // Set up relevant display board showing feedback to user 
@@ -173,13 +195,36 @@ function resetFontawesome() {
     $(document).ready(function(){
         $(".tick").toggleClass("display_none", true); 
         $(".xmark").toggleClass("display_none", true);        
-      });
+    });
 }
 
-// open end of quiz section with option to replay quiz and see final score
+// reset styling for div answer boxes
+
+function reset_answer_cards() {
+    $(document).ready(function(){
+        $('.box').css('border-left', '2px solid black');        
+    });    
+}
+
+// remove listener from cards as it was possible to select several cards instead of one
+
+function remove_card_listener() {
+    document.addEventListener("DOMContentLoaded", function() {
+        let cards = document.getElementsByClassName("box");
+        for (let card of cards) {
+            card.removeEventListener("click", function() {
+                console.log(cards);
+            });
+        }   
+    });
+}
+
+// open end of quiz section to see final score with option to replay quiz
+
 function endofQuiz() {
     $(document).ready(function(){
-        $(".quiz_ended").removeClass("display_none");            
+        $(".quiz_ended").removeClass("display_none");
+        $("#final_score").text(correctScore);        
     });
 }
 
