@@ -1,51 +1,50 @@
 
 
+
+
 * {
     margin: 0;
     padding: 0;
     border: 0;
     text-decoration: none;
     list-style: none;
+    background-color: b4f8c8;
+    color: black;
 }
 
 /*.........styling for the header.........*/
 
 .top_header {
     width: 100%;
-    background-color: #4c161d;
     height: 10vh;
     display: block;
     color: white;
+    font-size: 1rem;
+    background-color: #5c374c;
 }
 
 .inner_header {
     max-width: 80vw;
     height: 10vh;
-    background-color: white;
-    color:white;
     margin: 0 auto;
     display: block;
 }
 
-.logo {
-    background-color: silver;
-    font-size: 1rem;
+.logo {    
     float: left;
     padding-left: 1rem;
     padding-right: 1rem;
     line-height: 10vh;
     display: block;
+    color: white;
 }
 
-.logo h1 {    
-    color:red;
-}
 
 /*.........style content for main page area............*/
 
 .main_page {
     width: 100%;
-    background-color: blue;
+    background-color: white;
     height:  90vh;
     display: block;
     color: white;
@@ -54,23 +53,22 @@
 .main_content_page {
     max-width: 80vw;
     height: 90vh;
-    background-color: pink;
+    background-color: white;
     margin: 0 auto;
 }
 
 .score_board {
-    height: 4rem;
+    height: 8rem;
     width: 100%;
-    background-color: black;
-    color: white;
+    color: #b4f8c8;
 }
 
 .score_board_left, .score_board_right {
     float: left;
     height: 4rem;
     width: 50%;
-    font-size: 1rem;
-    background-color: red;
+    font-size: 1.3rem;
+    background-color: #b4f8c8;
 }
 
 .score_board_right {
@@ -78,8 +76,8 @@
     text-align: right;
     height: 4rem;
     width: 50%;
-    font-size: 1rem;
-    background-color: purple;
+    font-size: 1.3rem;
+    background-color: #b4f8c8;
 }
 
 .question_box {
