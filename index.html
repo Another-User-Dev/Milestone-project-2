@@ -25,7 +25,8 @@
         <div class="top_header" > 
             <div class="inner_header">
                 <div class="logo"><h1>Fruit & Vegetable Quiz</h1></div>
-            </div>            
+            </div>
+            
         </div>
 
     </header>
@@ -39,9 +40,8 @@
         <!-- Score board header-->
         
         <div class="score_board">
-            <br>
-            <div class="score_board_left">Current score: <span id="current_score">0</span></div>
-            <div class="score_board_right">Question: <span id="question_index">1</span>/<span id="numberofquestions">0</span></div>            
+            <div class="score_board_left"><h3>Current score: <span id="current_score">0</span></h3></div>
+            <div class="score_board_right"><h3>Question: <span id="question_index">1</span>/<span id="numberofquestions">0</span></h3></div>            
         </div>
 
         <!-- Question and answer cards-->
@@ -49,26 +49,27 @@
         <div class="question_box" id="question_card"></div>           
 
             <div class="flex-container">
-                <div class="box" data-id = "a" role="button">                    
+                <div class="box A" data-id = "a" role="button">                    
                     <div id="card_a"></div>
                 </div>
-                <div class="box" data-id = "b" role="button">
+                <div class="box B" data-id = "b" role="button">
                     <div id="card_b"></div>
                 </div>
-                <div class="box" data-id = "c" role="button">
+                <div class="box C" data-id = "c" role="button">
                     <div id="card_c"></div>
                 </div>
-                <div class="box" data-id = "d" role="button">
+                <div class="box D" data-id = "d" role="button">
                     <div id="card_d"></div>
                 </div>
             </div>
 
         <div class = "question_feedback_box display_none">
             <br>
-            <p><span id = "feedback"> </span></p>
+            <h2>Correct</h2>
             <br>
             <div class = "xmark display_none"> <i class="fa-solid fa-xmark"></i> </div>
-            <div class = "tick display_none"> <i class="fa-solid fa-check"></i> </div>            
+            <div class = "tick display_none"> <i class="fa-solid fa-check"></i> </div>
+            <h2><span id = "feedback"> </span></h2>
             <br><br>
             <div><button id = "button2" data-type = "n" >Next Question</button></div>
         </div>
