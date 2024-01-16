@@ -202,3 +202,9 @@
     width: 3rem;
     height: 3rem;
 }
+
+/*......... identify card with correct answer ........*/
+
+.change_card_col {
+    background-color: "green";
+}

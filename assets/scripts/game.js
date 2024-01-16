@@ -25,6 +25,8 @@ const questions = [
     answer: 'b'},
 ];
 
+
+
 // declaring variables
 
 let correctScore = 0;
@@ -102,7 +104,7 @@ function restartGame() {
     setScoreboard();
 }
 
-// setQuestion function() set questions with answer buttons
+// setQuestion function() set up question and answer options
 
 function setQuestion() {
     document.getElementById("question_card").innerText = questions[questionCount].question;
@@ -121,10 +123,11 @@ function setScoreboard() {
     document.getElementById("numberofquestions").textContent = totalQuestion;
 }
 
-// check if button = right answer add score
+// check if card has right answer add score
 
 function checkAnswers () {
     enableOptions = false;
+    setColour_card ();
     if (cardLetter === questions[questionCount].answer) {
         correctScore++;
         questionCount++;
@@ -136,21 +139,39 @@ function checkAnswers () {
     }   
 }
 
-// The two functions below give feedback on answered questions
+// turn the card with right answer to green
+function setColour_card () {
+    let answerLetter = "";
+    answerLetter = questions[questionCount].answer;
+    if (answerLetter === "a") { 
+        document.getElementById("box_a").style.backgroundColor = "green";
+    }
+    if (answerLetter === "b") { 
+        document.getElementById("box_b").style.backgroundColor = "green";
+    }
+    if (answerLetter === "c") { 
+        document.getElementById("box_c").style.backgroundColor = "green";
+    }
+    if (answerLetter === "d") { 
+        document.getElementById("box_d").style.backgroundColor = "green";
+    }    
+}
+
+// The two functions below give feedback on answered question
 
 function rightAnswer() {
-    setup_question_feedback_box_right(); 
+   
+    setup_question_feedback_box_right();     
 }
 
 function wrongAnswer() {
-    setup_question_feedback_box_wrong();
-}
+    setup_question_feedback_box_wrong();}
 
 // Show header score board
 
 function set_displayScoreboard() {       
     $(document).ready(function(){
-        $(".score_board").removeClass("display_none");        
+        $(".question_feedback_box").addClass("display_none");        
     });
 }
 
@@ -166,8 +187,7 @@ function setup_question_feedback_box_right() {
     
 // Set up relevant display board showing feedback to user 
 
-function close_question_feedback_box_right() {
-       
+function close_question_feedback_box_right() {     
     $(document).ready(function(){
         $(".question_feedback_box").addClass("display_none");
         $(".tick").addClass("display_none");        
@@ -202,9 +222,13 @@ function resetFontawesome() {
     });
 }
 
-// reset styling for div answer boxes
+// reset styling for div answer cards
 
 function reset_answer_cards() {
+    document.getElementById("box_a").style.backgroundColor = "transparent";
+    document.getElementById("box_b").style.backgroundColor = "transparent";
+    document.getElementById("box_c").style.backgroundColor = "transparent";
+    document.getElementById("box_d").style.backgroundColor = "transparent";
     $(document).ready(function(){
         $('.box').css('border-left', '2px solid black');        
     });    
