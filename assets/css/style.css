@@ -6,6 +6,7 @@
     border: 0;
     text-decoration: none;
     list-style: none;
+    font-family: roboto serif;
 }
 
 /*.........styling for the header.........*/
@@ -21,14 +22,14 @@
 .inner_header {
     max-width: 80vw;
     height: 10vh;
-    background-color: white;
+    background-color: #4c161d;
     color:white;
     margin: 0 auto;
     display: block;
 }
 
 .logo {
-    background-color: silver;
+    background-color: #4c161d;    
     font-size: 1rem;
     float: left;
     padding-left: 1rem;
@@ -38,46 +39,55 @@
 }
 
 .logo h1 {    
-    color:red;
+    color:whitesmoke;
+    font-family: handlee;
+    font-weight: 200;
 }
 
-/*.........style content for main page area............*/
+/*.........style content for main page areas............*/
 
 .main_page {
     width: 100%;
-    background-color: blue;
+    background-color: whitesmoke;
     height:  90vh;
     display: block;
-    color: white;
     }
 
 .main_content_page {
     max-width: 80vw;
     height: 90vh;
-    background-color: pink;
+    background-color: whitesmoke;
     margin: 0 auto;
 }
 
 .score_board {
     height: 4rem;
     width: 100%;
-    background-color: black;
     color: white;
 }
 
 .score_board_left {
     float: left;
     height: 4rem;
-    width: 50%;
-    background-color: red;
+    width: 49%;
+    color: white;
+    font-family: roboto serif;
+    font-weight: 100;
+    background-color: purple;
+    padding-left: 4px;
+    font-size: 1.2rem;
 }
 
 .score_board_right {
     float: left;
     text-align: right;
     height: 4rem;
-    width: 50%;
+    width: 49%;
     background-color: purple;
+    padding-right: 5px;
+    font-size: 1.2rem;
+    font-family: roboto serif;
+    font-weight: 100;
 }
 
 .question_box {
@@ -89,7 +99,7 @@
     height: 5rem;
     width: 75%;
     border-style: solid;
-    border-color: #16264c;
+    border-color: purple;
     border-width: 2px;
     border-radius: 8px;
     }
@@ -111,7 +121,7 @@
     height: 3rem;
     width: 75%;
     border-style: solid;
-    border-color: #16264c;
+    border-color: purple;
     border-width: 2px;
     border-radius: 8px;
     margin-bottom: 0px;
@@ -131,22 +141,13 @@
     font-size: 2rem;
 }
 
-.replyAnswer {
-    position: relative;
-    margin: auto;
-    padding-top: 10px;
-    top: 10%;
-    height: 400px;
-    width: 50%;
-    background-color: aqua;
-    border: none;
-}
+/*....for use with classes to switch off display....*/
 
 .display_none {
     display: none;
 }
 
-/*...........question feedback box .........*/
+/*...........question feedback to user boxes .........*/
 
 .question_feedback_box {
     margin: auto;
@@ -154,6 +155,7 @@
     margin-top: 25px;
     height: 12rem;
     width: 75%;
+    font-size: 1.2rem;
     border-color: black;
     background-color: orange;
 }
@@ -164,16 +166,18 @@
     margin-top: 25px;
     height: 12rem;
     width: 75%;
+    font-size: 2rem;
     border-color: black;
     background-color: orange;
 }
 
 /*..........styling answer button and position.....*/
 
-.button {
-    position: absolute;
-    bottom: 10%;
-    left: 35%;
+#button2, #button3 {
+    width: 200px;
+    height: 35px;
+    border-radius: 8px;
+    font-size: 1.2rem;
 }
 
 #end_footer {
@@ -182,16 +186,16 @@
     width: 100%;
     height: 25px;
     background-color: orange;
-    color: white;
+    color: black;
+    text-align: center;
 }
 
-.replyAnswer {
-    background-color: cornflowerblue;
-}
+/*..........styling fontawesome fonts.....*/
 
 .tick {
     background-color: green;
     font-size: 300%;
+    color: white;
     width: 3rem;
     height: 3rem;
 }
@@ -199,12 +203,7 @@
 .xmark {
     background-color: red;
     font-size: 300%;
+    color: white;
     width: 3rem;
     height: 3rem;
-}
-
-/*......... identify card with correct answer ........*/
-
-.change_card_col {
-    background-color: "green";
 }

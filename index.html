@@ -6,14 +6,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
-<meta name="keywords" content="">
+<meta name="keywords" content="quiz, food, fruit, vegetable, educational">
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Handlee&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="assets/css/style.css">
     
 <title>Fruit & Vegetable Quiz</title>
-
-<script src="https://kit.fontawesome.com/11af3b4277.js" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
 </head>
 
@@ -38,8 +41,8 @@
         <!-- Score board header-->
         
         <div class="score_board">
-            <div class="score_board_left"><h3>Current score: <span id="current_score">0</span></h3></div>
-            <div class="score_board_right"><h3>Question: <span id="question_index">1</span>/<span id="numberofquestions">0</span></h3></div>            
+            <div class="score_board_left">Current score: <span id="current_score">0</span></div>
+            <div class="score_board_right">Question: <span id="question_index">1</span>/<span id="numberofquestions">0</span></div>            
         </div>
 
         <!-- Question and answer cards-->
@@ -61,32 +64,38 @@
                 </div>
             </div>
 
+    <!--.......Box for giving feedback for question................-->
+
         <div class = "question_feedback_box display_none">
             <br>
             <div class = "xmark display_none"> <i class="fa-solid fa-xmark"></i> </div>
             <div class = "tick display_none"> <i class="fa-solid fa-check"></i> </div>
             <br>
-            <h2><span id = "feedback"> </span></h2>
-            <br>
-            <div><button id = "button2" data-type = "n" >Next Question</button></div>
+            <span id = "feedback"> </span>
+            <br><br>
+            <div><button id = "button2" data-type = "next_question" >Next Question</button></div>
         </div>
 
+        <!--.......Box for giving feedback on final score................-->
+
         <div class="quiz_ended display_none">
+            <br>
+            Your final score is: <span id="final_score">0</span>
             <br><br>
-            <h2>Your final score is: <span id="final_score">0</span></h2>
-            <br><br>
-            <button id = "button3" data-type="r">Play Again</button>
+            <button id = "button3" data-type="replay_quiz">Play Again</button>
         </div>
     </div>       
             
     <!-- Footer for website -->
 
         <footer id="end_footer">
-            hello
+            Copyright (C) 2024, Michael Mohamed, Code Institute
         </footer>
     </div>
 
-    <script src="assets/scripts/game.js"></script>
+<script src="assets/scripts/game.js"></script>
+<script src="https://kit.fontawesome.com/11af3b4277.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </body>
 
 </html>

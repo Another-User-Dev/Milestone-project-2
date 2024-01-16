@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let button of buttons) {
         button.addEventListener("click", function() {
             buttonLetter = this.getAttribute("data-type");           
-                if (buttonLetter === "n") {
+                if (buttonLetter === "next_question") {
                     resetFontawesome();
                     close_question_feedback_box_right();
                     close_question_feedback_box_wrong();
@@ -64,12 +64,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 } else {
                     document.getElementById("current_score").textContent = correctScore;
                     endofQuiz();
+                    }
+            } else if (buttonLetter === "replay_quiz") {
+                  close_endofQuiz();
+                  reset_answer_cards();
+                 restartGame();                   
                 }
-            } else if (buttonLetter === "r") {
-                close_endofQuiz();
-                reset_answer_cards();
-                restartGame();
-            }
         });            
     }
 
@@ -139,7 +139,7 @@ function checkAnswers () {
     }   
 }
 
-// turn the card with right answer to green
+// turn the card with correct option to green
 function setColour_card () {
     let answerLetter = "";
     answerLetter = questions[questionCount].answer;
