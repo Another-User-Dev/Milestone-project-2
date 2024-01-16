@@ -1,6 +1,12 @@
+----
 # Fruit and Vegetable Quiz
 
-## Code Institute - Milestone  
+## Code Institute - Milestone Project
+
+___________________________________________________________________________________________________
+
+<hr>
+
 
 
 

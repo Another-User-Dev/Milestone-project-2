@@ -65,10 +65,11 @@
     color: white;
 }
 
-.score_board_left {
+.score_board_left, .score_board_right {
     float: left;
     height: 4rem;
     width: 50%;
+    font-size: 1rem;
     background-color: red;
 }
 
@@ -77,6 +78,7 @@
     text-align: right;
     height: 4rem;
     width: 50%;
+    font-size: 1rem;
     background-color: purple;
 }
 
@@ -147,6 +149,11 @@
 }
 
 /*...........question feedback box .........*/
+
+#feedback {
+    font-size: 2rem;
+    color: white;
+}
 
 .question_feedback_box {
     margin: auto;

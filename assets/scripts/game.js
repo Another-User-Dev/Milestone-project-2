@@ -159,7 +159,8 @@ function set_displayScoreboard() {
 function setup_question_feedback_box_right() {       
     $(document).ready(function(){
         $(".question_feedback_box").removeClass("display_none");
-        $(".tick").removeClass("display_none");        
+        $(".tick").removeClass("display_none"); 
+        $("#feedback").text("Correct");       
     });
 }
     
@@ -176,9 +177,10 @@ function close_question_feedback_box_right() {
 // Set up relevant display board showing feedback to user  
 
 function setup_question_feedback_box_wrong() {  
-    $(document).ready(function(){
+    $(document).ready(function(){        
         $(".question_feedback_box").removeClass("display_none");
-        $(".xmark").removeClass("display_none");        
+        $(".xmark").removeClass("display_none");
+        $("#feedback").text("Wrong");        
       });
 }
 
