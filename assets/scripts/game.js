@@ -124,7 +124,7 @@ function setScoreboard() {
 // check if button = right answer add score
 
 function checkAnswers () {
-    enableOptions = false
+    enableOptions = false;
     if (cardLetter === questions[questionCount].answer) {
         correctScore++;
         questionCount++;
@@ -213,6 +213,7 @@ function reset_answer_cards() {
 // open end of quiz section to see final score with option to replay quiz
 
 function endofQuiz() {
+    enableOptions = false; // disable listening events to  answer cards
     $(document).ready(function(){
         $(".quiz_ended").removeClass("display_none");
         $("#final_score").text(correctScore);        
@@ -220,6 +221,7 @@ function endofQuiz() {
 }
 
 function close_endofQuiz() {
+    enableOptions = true; // activate listen events to  answer cards
     $(document).ready(function(){
         $(".quiz_ended").addClass("display_none");            
     });

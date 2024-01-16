@@ -25,10 +25,8 @@
         <div class="top_header" > 
             <div class="inner_header">
                 <div class="logo"><h1>Fruit & Vegetable Quiz</h1></div>
-            </div>
-            
+            </div>            
         </div>
-
     </header>
 
     <!-- Middle part for website -->
@@ -49,28 +47,27 @@
         <div class="question_box" id="question_card"></div>           
 
             <div class="flex-container">
-                <div class="box A" data-id = "a" role="button">                    
+                <div class="box" id="box_a" data-id = "a" role="button">                    
                     <div id="card_a"></div>
                 </div>
-                <div class="box B" data-id = "b" role="button">
+                <div class="box" id="box_b" data-id = "b" role="button">
                     <div id="card_b"></div>
                 </div>
-                <div class="box C" data-id = "c" role="button">
+                <div class="box" id="box_c" data-id = "c" role="button">
                     <div id="card_c"></div>
                 </div>
-                <div class="box D" data-id = "d" role="button">
+                <div class="box" id="box_d" data-id = "d" role="button">
                     <div id="card_d"></div>
                 </div>
             </div>
 
         <div class = "question_feedback_box display_none">
             <br>
-            <h2>Correct</h2>
-            <br>
             <div class = "xmark display_none"> <i class="fa-solid fa-xmark"></i> </div>
             <div class = "tick display_none"> <i class="fa-solid fa-check"></i> </div>
+            <br>
             <h2><span id = "feedback"> </span></h2>
-            <br><br>
+            <br>
             <div><button id = "button2" data-type = "n" >Next Question</button></div>
         </div>
 
