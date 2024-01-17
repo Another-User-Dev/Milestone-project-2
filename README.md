@@ -1,7 +1,19 @@
 ----
-# Fruit and Vegetable Quiz
+# CODE INSTITUTE - MILESTONE 2 PROJECT 2024
 
-## Code Institute - Milestone Project
+## FRUIT & VEGETABLE QUIZ
+
+### An application using HTML, CSS and JavaScript.
+
+
+
+
+
+
+
+
+
+
 
 ___________________________________________________________________________________________________
 
