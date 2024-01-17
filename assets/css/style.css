@@ -207,3 +207,70 @@
     width: 3rem;
     height: 3rem;
 }
+
+/*.........media query for smaller screen..........*/
+
+@media screen and (max-width: 375px) {
+
+.logo {
+        font-size: 75%;
+        margin-left: 5px;
+    }
+
+.score_board_left {
+    font-size: 0.75rem;
+    width: 80%;
+    text-align: left;
+    display: block;
+    height: 2rem;
+}
+
+.score_board_right {
+    font-size: 0.75rem;
+    width: 80%;
+    text-align: left;
+    display: block;
+    height: 2rem;
+    padding-right: 0px;
+    padding-left: 4px;
+    position: relative;
+}
+
+#question_card {
+    width: 80%;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.question_box {
+    width: 80%;
+    display: block;
+
+}
+ /*  .flex-container {
+        position: block;  
+        height: auto; 
+        display: flex; 
+        flex-flow: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }*/
+
+.box {
+    display: block;
+}
+
+#card_a, #card_b, #card_c, #card_d  {
+    height: 15px;
+    width: 75%;
+    border: none;
+    text-align: left;
+    font-size: 1rem;
+}
+
+#end_footer {
+    font-size: x-small;
+}
+
+}
