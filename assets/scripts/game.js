@@ -230,7 +230,7 @@ function reset_answer_cards() {
     document.getElementById("box_c").style.backgroundColor = "transparent";
     document.getElementById("box_d").style.backgroundColor = "transparent";
     $(document).ready(function(){
-        $('.box').css('border-left', '2px solid black');        
+        $('.box').css('border-left', '2px solid purple');        
     });    
 }
 

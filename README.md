@@ -38,33 +38,116 @@ We will demonstrate the achievement of the user story through user story testing
         * build a single application for a variety of devices like mobile phones,tablets and laptops/desktops
         * design a website wth consistent styling, legibility, and functionality
 
-## THE FIVE PLANES OF UX DESIGN
-
-### Strategy
+#### Strategy
 
         * To build a fun quiz app with interesting questions about fruit and vegetables
-        * 
-        * The end user will have an interest in food or wish to learn more about food
-        * It is thought obesity crisis will cost Western Economies $4 trillion by 2035
+        * The end user is thought to have an interest in food or wish to learn more about food
+        * Allows the site owner the experience to build webs 
+          and using the experience to design apps for income
+        * Building an web app for the common good can provide future income opportunities elsewhere                   
+        
+              
+        Note:   
+                * It is thought obesity crisis will cost Western Economies $4 trillion by 2035 
+                * Obesity have a huge impact on personal health, discrimination, life expectancy,
+                  social mobility and personal relationships.
+                
+
+#### Scope
+
+Header
+
+* To have a header with a title of the website incorporated as a logo
+
+Main page
+
+* To have a score area showing current score and question 
+  count
+* Question box showing question about fruit or vegetable
+* Four clickable cards showing answer options
+* User option selection shown on screen
+* A feedback box appear, showing whether question is correct or not, with
+  a call to action button for next question
+* Card option turns colour indicating correct answer
+* Score and question count updated for each question
+* User is notified for end of quiz and is given a final score
+* Another call for action button to restart quiz
+
+Footer
+
+* a simple footer - no links to social media as the focus is on the quiz
+
+- - -
+
+## DESIGN
+
+#### Colours
+
+Initially these colours were chosen for contrast while constructing the website and to help identify formatting conflicts. However, the proposed colours did not provide acceptable contrast to satisfy the accessiblity
+criteria. 
+
+The chosen colours contrasted nicely with either a black or white fonts. Thus aiding readability. Although there are a number of colours on the palette, some of them were mainly used to accentuate right, wrong answers and card answer selection. There is a subtle difference between white and smoke white. The colours are balanced, nicely contrasted with each other and does not overwhelm the user with colours. Also the coloured areas show nice separation such as the header, scoreboard and footer.
+
+Green gives the user the vibe of right answer while red indicates wrong. Useful colours when writing a quiz app.
+
+Main website colours:
+
+#800080 - borders, scoreboard <br>
+#ffa500 - background colour for feedback boxes and footer<br>
+#4c161d - header<br>
+#008000 - for background colour for card option with correct answer and background colour for tick<br>
+#0000ff - for highlighting the user selected card by changing its left border <br>
+#ffffff & #f5f5f5 - logo and main background colours <br>
+
+<img src = 'assets/readme_images/readme/website colours.jpg'>
+
+Font colours:
+
+Black
+White
+
+#### Typeface
+
+Typeface: Roboto Serif and Handlee
+
+Fonts were obtained from Google Fonts. 
+
+I like Roboto Serif for its clarity and modern design without distracting the user in terms of readability.
+
+Handlee font was chosen for its quirkiness, sharpness and with a modern feel.
+
+Both fonts are easy to read.
+
+<img src = 'assets/readme_images/readme/logo - font.jpg'>
+
+- - -
+
+#### Wiroframes
+
+Initially wireframes were drawn up prior to coding but was changed midway due to the complexity of coding.
+
+The wireframes provide some basic web structures and is a good indication on how the website will function
+
+While the wiroframes isn't an exact representation of the final product, they are similar. 
+
+The images 
+
+<img src = 'assets/readme_images/readme/6 Smart phone - home page.png'>
+
+<img src = 'assets/readme_images/readme/3 Tablet home page.png'>
+
+<img src = 'assets/readme_images/readme/1 PC quiz.png'>
+
+#### Features
+
+Below is a the favicon feature with the initials of the website title and background colour of the header for design consistency.
+
+<img src = assets/readme_images/readme/Screenshot - favicon feature.jpg>
 
 
 
 
 
-
-### Scope
-
-Most people have some knowledge about food but not every have a full one. However, there are plenty of information aboout food around; free of charge. The data can be updated on a weekly basis to prevent users from turnimg stale with the web app. 
-
-### Structure
-
-The wireframes provide some basic web structures and is a good indication on how the website will function.
-
-
-
-detail
-
-![]=(assets/readme_images/readme/1 PC quiz.png)
 
 
 
