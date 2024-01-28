@@ -99,7 +99,7 @@ Main website colours:
 #0000ff - for highlighting the user selected card by changing its left border <br>
 #ffffff & #f5f5f5 - logo and main background colours <br>
 
-<img src = 'assets/readme_images/readme/website colours.jpg'>
+<img src = 'assets/readme_images/readme/website-colours.jpg'>
 
 Font colours:
 
@@ -118,9 +118,9 @@ Handlee font was chosen for its quirkiness, sharpness and with a modern feel.
 
 Both fonts are easy to read.
 
-<img src = 'assets/readme_images/readme/logo - font.jpg'>
+<img src = 'assets/readme_images/readme/logo.jpg'>
 
-- - -
+_ _ _
 
 #### Wiroframes
 
@@ -132,17 +132,106 @@ While the wiroframes isn't an exact representation of the final product, they ar
 
 The images 
 
-<img src = 'assets/readme_images/readme/6 Smart phone - home page.png'>
 
-<img src = 'assets/readme_images/readme/3 Tablet home page.png'>
+<img src = 'assets/readme_images/readme/wiroframes-smartphone.png'>
 
-<img src = 'assets/readme_images/readme/1 PC quiz.png'>
+<img src = 'assets/readme_images/readme/wiroframes-tablet.png'>
+
+<img src = 'assets/readme_images/readme/wiroframespc.png'>
 
 #### Features
 
+Favicon
+
 Below is a the favicon feature with the initials of the website title and background colour of the header for design consistency.
 
-<img src = assets/readme_images/readme/Screenshot - favicon feature.jpg>
+<img src = 'assets/readme_images/readme/features-favicon.jpg'>
+
+Logo and header
+
+Here is the logo following the consistent colours of the favicon. Also shown is the header page. 
+
+<img src = 'assets/readme_images/readme/features-logo.jpg'>
+
+Scoreboard
+
+Scoreboard giving current score and quiz count index. Each count is incremented accordingly.
+
+<img src = 'assets/readme_images/readme/features-scoreboard.jpg'>
+
+Question box with four answer card option
+
+This shows the state of the quiz where the user has not yet answered the question.
+
+<img src = 'assets/readme_images/readme/featuresquestionandansweroptions.jpg'>
+
+Question box with four answer card option
+
+Shows the state play after user selected the right answer. You can see the blue border indicating the user card selection. One of the cards turned green indicating the right answer.
+
+Below the answer card is a box showing correct to let the user know the answer is correct. A symbol appears with a tick. Below the tick is a call to action button for next question. As you can imagine the user has received feedback from the colour changes and feedback box.
+
+<img src = 'assets/readme_images/readme/feature-question4answeroptions-right.jpg'>
+
+Question box with four answer card option - showing wrong
+
+Shows the state play after user selected the wrong answer. You can see the blue border indicating the user card selection. One of the cards turned green indicating the right answer. As you can imagine the user has received feedback from the colour changes and feedback box.
+
+Below the answer card is a box showing wrong to let the user know the answer is wrong. A symbol appears with a cross. Below the cross is a call to action button for next question. As you can imagine the user has received feedback from the colour changes and feedback box.
+
+<img src = 'assets/readme_images/readme/featurequestion4answeroptions-wrong.jpg'>
+
+The user has reach the end of the quiz. The feedback box gives the final score with an option to replay the quiz.
+
+<img src = 'assets/readme_images/readme/feature-question4answeroptions-end.jpg'>
+
+Footer
+
+A simple footer
+
+<img src = 'assets/readme_images/readme/feature-footer.jpg'>
+
+- - - 
+
+## TECHNOLOGY IMPLEMENTED
+
+#### Language
+
+HTML
+CSS
+JavaScript
+
+#### Framework and Tools
+
+Balsamiq
+jQuery
+Git
+Github
+Gitpod
+Google Chrome tools
+Coolers
+Google Fonts
+Favicon.io
+Font Awesome
+
+## DEPLOYMENT
+
+## CREDITS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

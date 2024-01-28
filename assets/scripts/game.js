@@ -1,4 +1,4 @@
-
+console.log(window.innerHeight);
 
 // data for questions
 

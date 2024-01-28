@@ -20,7 +20,7 @@
 }
 
 .inner_header {
-    max-width: 80vw;
+    max-width: 80%;
     height: 10vh;
     background-color: #4c161d;
     color:white;
@@ -54,7 +54,7 @@
     }
 
 .main_content_page {
-    max-width: 80vw;
+    max-width: 80%;
     height: 90vh;
     background-color: whitesmoke;
     margin: 0 auto;
@@ -74,7 +74,7 @@
     font-family: roboto serif;
     font-weight: 100;
     background-color: purple;
-    padding-left: 4px;
+    padding-left: 0px;
     font-size: 1.2rem;
 }
 
@@ -84,7 +84,7 @@
     height: 4rem;
     width: 49%;
     background-color: purple;
-    padding-right: 5px;
+    padding-right: 0px;
     font-size: 1.2rem;
     font-family: roboto serif;
     font-weight: 100;
@@ -210,23 +210,33 @@
 
 /*.........media query for smaller screen..........*/
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 600px) {
 
 .top_header {
     width: 100%;
     background-color: #4c161d;
-    height: 10vh;
+    height: 30px;
     display: block;
     color: white;
 }
 
 .logo > h1 {
-    font-size: 125%;
+    font-size: 50%;
+}
+
+.logo {
+    background-color: #4c161d;    
+    font-size: 1rem;
+    float: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    line-height: 30px;
+    display: block;
 }
 
 .inner_header {
-        max-width: 80vw;
-        height: 10vh;
+        max-width: 80%;
+        height: 30px;
         background-color: #4c161d;
         color:white;
         margin: 0 auto;
@@ -241,7 +251,7 @@
     }
 
 .main_content_page {
-    max-width: 80vw;
+    max-width: 80%;
     height: 90vh;
     background-color: whitesmoke;
     margin: 0 auto;
@@ -249,24 +259,24 @@
 
 .score_board {
     height: auto;
-    width: 100%;
+    width: auto;
     color: white;
 }
 
-.score_board_left {
-    font-size: 0.75rem;
-    width: 49%;
+.score_board_left {    
+    font-size: 0.5rem;
+    width: 50%;
     text-align: left;
-    height: 2rem;
-    display: inline-block;
+    height: auto;
+    display: block-inline;
 }
 
 .score_board_right {
-    font-size: 0.75rem;
-    width: 48%;
+    font-size: 0.5rem;
+    width: 50%;
     text-align: right;
-    height: 2rem;
-    display: inline-block;
+    height: auto;
+    display: block-inline;
 }
 
 #question_card {
@@ -304,5 +314,4 @@
 #end_footer {
     font-size: x-small;
 }
-
 }
