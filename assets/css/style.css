@@ -161,7 +161,8 @@
 
 .display_inarow {
     display: inline-block;
-    width: 25%;
+    line-height: 50%;
+    width: 33%;
 }
 
 .quiz_ended {

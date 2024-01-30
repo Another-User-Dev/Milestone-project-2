@@ -46,11 +46,12 @@ setScoreboard();
 // Get the button elements and add event listeners to them
 
 document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByClassName("button");
+    let buttons = document.getElementsByClassName("feedback");
   
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            buttonLetter = this.getAttribute("data-type");           
+            //buttonLetter = this.getAttribute("data-type");
+            buttonLetter = this.dataset.next;           
                 if (buttonLetter === "next_question") {
                     resetFontawesome();
                     close_question_feedback_box_right();
