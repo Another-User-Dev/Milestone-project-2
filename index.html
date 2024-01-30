@@ -43,8 +43,8 @@
         <!-- Score board header-->
         
         <div class="score_board">
-            <div class="score_board_left">Current score: <span id="current_score">0</span></div>
-            <div class="score_board_right">Question: <span id="question_index">1</span>/<span id="numberofquestions">0</span></div>            
+            <div class="score_board_left"><span>&nbsp</span>Current score: <span id="current_score">0</span></div>
+            <div class="score_board_right">Question: <span id="question_index">1</span>/<span id="numberofquestions">0</span><span>&nbsp</span></div>            
         </div>
 
         <!-- Question and answer cards-->
@@ -52,7 +52,7 @@
         <div class="question_box" id="question_card"></div>           
 
             <div class="flex-container">
-                <div class="box" id="box_a"  data-id = "a" role="button">                    
+                <div class="box" id="box_a" data-id = "a" role="button">                    
                     <div id="card_a"></div>
                 </div>
                 <div class="box" id="box_b" data-id = "b" role="button">
@@ -68,19 +68,26 @@
 
     <!--.......Box for giving feedback for question................-->
 
-        <div class = "question_feedback_box display_none">
+        <div class = "question_feedback_box feedback display_none" data-id = "next_question" role="button" >
+            
             <br>
-            <div class = "xmark display_none"> <i class="fa-solid fa-xmark"></i> </div>
-            <div class = "tick display_none"> <i class="fa-solid fa-check"></i> </div>
-            <br>
+            <span>
+            <div class="display_inarow centre">
+            <div class = "xmark display_none"> <i class="fa-solid fa-xmark"></i></div>
+            <div class = "tick display_none"> <i class="fa-solid fa-check"></i></div>
+            </div>
+            <div class="display_inarow centre">
             <span id = "feedback"> </span>
-            <br><br>
-            <div><button id = "button2" data-type = "next_question" >Next Question</button></div>
+            </div>
+            <div class="display_inarow centre">
+            <div><button id = "button2" data-type = "next_question" >Next</button></div>
+            </span>
+            </div>
         </div>
 
         <!--.......Box for giving feedback on final score................-->
 
-        <div class="quiz_ended display_none">
+        <div class="quiz_ended feedback display_none" data-id = "replay_quiz" role="button">
             <br>
             Your final score is: <span id="final_score">0</span>
             <br><br>
