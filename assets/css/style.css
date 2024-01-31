@@ -69,7 +69,7 @@
 .score_board_left {
     float: left;
     height: 4rem;
-    width: 49%;
+    width: 50%;
     color: white;
     font-family: roboto serif;
     font-weight: 100;
@@ -82,7 +82,7 @@
     float: left;
     text-align: right;
     height: 4rem;
-    width: 49%;
+    width: 50%;
     background-color: purple;
     padding-right: 0px;
     font-size: 1.2rem;
@@ -189,7 +189,7 @@
 
 /*..........styling answer button and position.....*/
 
-#button2, #button3 {
+#button2 {
     width: 80px;
     height: 35px;
     border-radius: 8px;
@@ -215,11 +215,6 @@
 
 /*..........styling fontawesome fonts.....*/
 
-.centre { 
-    text-align: center; 
-    width: 30%; 
-} 
-
 .tick {
     margin: auto;
     background-color: #008000;
@@ -237,6 +232,11 @@
     width: 3rem;
     height: 3rem;
 }
+
+.centre { 
+    text-align: center; 
+    width: 30%; 
+} 
 
 /*.........media query for smaller screen..........*/
 
@@ -256,7 +256,7 @@
 
 .logo {
     background-color: #4c161d;    
-    font-size: 1rem;
+    font-size: 2rem;
     float: left;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -359,8 +359,15 @@
     height: 1rem;
 }
 
-#button2, #button3 {
+#button2 {
     width: 50px;
+    height: 20px;
+    border-radius: 8px;
+    font-size: 10px;
+}
+
+#button3 {
+    width: 80px;
     height: 20px;
     border-radius: 8px;
     font-size: 10px;
@@ -376,6 +383,23 @@
     border-color: black;
     background-color: #ffa500;
 }
+
+.quiz_ended {
+    margin: auto;
+    margin-top: 25px;
+    height: 4rem;
+    width: 100%;
+    font-size: 8px;
+    border-color: #000000;
+    background-color: orange;
+}
+
+.display_inarow2 {
+    display: inline-block;    
+    width: 45%;
+    text-align: center;
+    line-height: 1rem;
+} 
 }
 
 

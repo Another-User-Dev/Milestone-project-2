@@ -71,7 +71,9 @@ document.addEventListener("DOMContentLoaded", function() {
                   reset_answer_cards();
                  restartGame();                   
                 }
-        });            
+        });  
+      
+
     }
 
     let cards = document.getElementsByClassName("box");
@@ -92,8 +94,19 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
         });
-    }   
+    } 
+    
+    let feedbackBoxes = document.getElementsByClassName("feedback");
+
+    for (let feedbackBox of feedbackBoxes) {
+        console.log("hovering")
+        feedbackBox.addEventListener('mouseover', changecoloursHover);
+        feedbackBox.addEventListener('mouseout', revertcoloursHover);
+    }
+    
 });
+
+    
 
 //startGame function() display instruction with start button - hide display for next page - set scores to zero
 
@@ -238,7 +251,7 @@ function reset_answer_cards() {
 // open end of quiz section to see final score with option to replay quiz
 
 function endofQuiz() {
-    enableOptions = false; // disable listening events to  answer cards
+    enableOptions = false; // disable flag for listening events to answer cards
     $(document).ready(function(){
         $(".quiz_ended").removeClass("display_none");
         $("#final_score").text(correctScore);        
@@ -246,8 +259,22 @@ function endofQuiz() {
 }
 
 function close_endofQuiz() {
-    enableOptions = true; // activate listen events to  answer cards
+    enableOptions = true; // activate flag for listen events to answer cards
     $(document).ready(function(){
         $(".quiz_ended").addClass("display_none");            
     });
 }
+
+// Hover styling for feedback boxes
+
+function changecoloursHover() {
+    this.style.backgroundColor = "purple";
+    this.style.color = "white";
+}
+
+function revertcoloursHover() {
+    this.style.backgroundColor = "#ffa500";
+    this.style.color = "black";
+}
+
+// Hover styling for answer boxes
