@@ -26,7 +26,6 @@ const questions = [
 ];
 
 
-
 // declaring variables
 
 let correctScore = 0;
@@ -79,9 +78,11 @@ document.addEventListener("DOMContentLoaded", function() {
     let cards = document.getElementsByClassName("box");
 
     for (let card of cards) {
+        card.addEventListener("mouseover", changecoloursCardhover);
+        card.addEventListener("mouseout", revertcoloursCardhover);
         card.addEventListener("click", function() {
             if (enableOptions) {
-                cardLetter = this.dataset.id;
+                cardLetter = this.dataset.id;       
                 this.style.borderLeft  = "16px solid blue";    
                 if  (cardLetter === "a") {
                     checkAnswers();
@@ -105,7 +106,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
 });
-
     
 
 //startGame function() display instruction with start button - hide display for next page - set scores to zero
@@ -278,3 +278,13 @@ function revertcoloursHover() {
 }
 
 // Hover styling for answer boxes
+
+function changecoloursCardhover() {
+    this.style.backgroundColor = "purple";
+    this.style.color = "white";
+}
+
+function revertcoloursCardhover() {
+    this.style.backgroundColor = "whitesmoke";
+    this.style.color = "black";
+}
