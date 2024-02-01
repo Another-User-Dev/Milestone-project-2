@@ -312,7 +312,7 @@ Click on the fork symbol to fork the code
 
 ## CREDITS
 
-Special thanks to my mentor 
+Special thanks to my mentor Celestine Okwudiri
 
 Guidance on toggle class with boolean logic 
 
