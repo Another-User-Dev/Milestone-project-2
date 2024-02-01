@@ -214,6 +214,26 @@ Google Fonts
 Favicon.io
 Font Awesome
 
+## BUGS & ISSUES
+
+#### W3C -HTML
+
+button descendent of element with role - solved by creating a div styled similar to a button
+
+added semi-colon to &nbsp;
+
+#### W3C - CSS
+
+value block-inline
+
+margin with a comma
+
+flex-wrap: wrap;
+
+#### JSHINT
+
+
+
 ## DEPLOYMENT
 
 ## CREDITS
