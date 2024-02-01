@@ -276,7 +276,7 @@ https://api.jquery.com/toggleClass/#:~:text=toggleClass(%20classNames%2C%20state
 
 Button descendent of element with role - solved by creating a div styled similar to a button
 
-Added semi-colon to '&nbsp';
+Added semi-colon to '&nbsp'git add;
 
 #### W3C - CSS
 
