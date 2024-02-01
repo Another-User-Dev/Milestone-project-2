@@ -12,6 +12,8 @@ ________________________________________________________________________________
 
 <img src='assets/readme_images/readme2/amiresponsive.jpg'>
 
+[Deployed project](https://another-user-dev.github.io/Milestone-project-2/)
+
 <hr>
 
 - [CODE INSTITUTE - MILESTONE 2 PROJECT 2024](#code-institute---milestone-2-project-2024)
