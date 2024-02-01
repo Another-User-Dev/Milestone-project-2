@@ -216,27 +216,79 @@ Font Awesome
 
 ## BUGS & ISSUES
 
+
+1) Fix double showing fontawesome icons on the feedback box by using toggleclass with boolean logic. Read up jQuery documentation guidance.
+
+https://api.jquery.com/toggleClass/#:~:text=toggleClass(%20classNames%2C%20state%20),-classNames&text=Type%3A%20Array-,An%20array%20of%20classes%20to%20be%20toggled,element%20in%20the%20matched%20set.&text=Type%3A%20Boolean-,A%20boolean%20(not%20just%20truthy%2Ffalsy)%20value%20to%20determine,should%20be%20added%20or%20removed.
+
+2) 16/01/24 - Fixed broken website. Copied and pasted last known worked files from Github into Gitpod and using git pull. Problem occurred after several erroneous copy and paste errors. 
+
+3) Huge issue with using settimeout() function. I didn't realise it was asynchrous and caused an issue as I was expecting the function to be sequential. In the end I felt I couldn't trust this function. I decided to have a mouse driven quiz rather than a timer between questions.
+
+4) Original site was clumsy in use before embarking on a new approach after discussing with my mentor.
+
+5) Answer options continued to be selected after the first one was selected. Mentor suggested using enableOptions as a boolean flag to stop the other code from interacting with the event listener.
+
+6) Problem with website scaling down to mobile devices and content spilling. Issue didn't occur on smaller devices. Issue was fixed after realising the media query width was set too low.
+
+7) I had to swap my code on my own Gitpod account to a Code Institute one.
+
+8) Answer cards were breaking up after using JavaScript hover codes with a boolean flag to stop it from hovering after click. Decided to remove the boolean flag and the app functionality returned to normal.
+
+9) Issues with using the two link on the bottom of the body html. 
+
+<script src="https://kit.fontawesome.com/11af3b4277.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
 #### W3C -HTML
 
-button descendent of element with role - solved by creating a div styled similar to a button
+Button descendent of element with role - solved by creating a div styled similar to a button
 
-added semi-colon to &nbsp;
+Added semi-colon to &nbsp;
 
 #### W3C - CSS
 
-value block-inline
+A few issues which were easily corrected:
+            * display value with a property back to front (block-inline),
+            * margin auto 0 with a comma in between
+            * using flex-wrap: wrap with a property of none
 
-margin with a comma
-
-flex-wrap: wrap;
 
 #### JSHINT
 
-
+No issues
 
 ## DEPLOYMENT
 
+Deploying website in Github
+
+Log into Github
+Go to your repositories
+Select your required repository
+Click on settings
+Select page on the left hand menu
+Select branch to main, select folder to root and finally press save
+A link will appear within your required repository under environments after several minutes
+Website now live
+
+Forking website
+
+Log into Github
+Go to your repositories
+Go to the required repository
+Click on the fork symbol to fork the code
+
 ## CREDITS
+
+Special thanks to my mentor 
+
+Guidance on toggle class with boolean logic 
+
+https://api.jquery.com/toggleClass/#:~:text=toggleClass(%20classNames%2C%20state%20),-classNames&text=Type%3A%20Array-,An%20array%20of%20classes%20to%20be%20toggled,element%20in%20the%20matched%20set.&text=Type%3A%20Boolean-,A%20boolean%20(not%20just%20truthy%2Ffalsy)%20value%20to%20determine,should%20be%20added%20or%20removed.
+
+MDN guidance on div 
+
+https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role
 
 
 
