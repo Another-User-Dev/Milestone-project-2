@@ -9,6 +9,38 @@ ________________________________________________________________________________
 
 ______________________________________________________________________________________________________________________________________________________________
 
+
+<img src='assets/readme_images/readme2/amiresponsive.jpg'>
+
+<hr>
+
+- [CODE INSTITUTE - MILESTONE 2 PROJECT 2024](#code-institute---milestone-2-project-2024)
+  * [FRUIT & VEGETABLE QUIZ](#fruit---vegetable-quiz)
+    + [An application using HTML, CSS and JavaScript.](#an-application-using-html--css-and-javascript)
+  * [USER STORY](#user-story)
+      - [The user will want to use an application that:](#the-user-will-want-to-use-an-application-that-)
+  * [SITE OWNER STORY](#site-owner-story)
+      - [The site owner will:](#the-site-owner-will-)
+      - [Strategy](#strategy)
+      - [Scope](#scope)
+  * [DESIGN](#design)
+      - [Colours](#colours)
+      - [Typeface](#typeface)
+      - [Wiroframes](#wiroframes)
+      - [Features](#features)
+  * [TECHNOLOGY IMPLEMENTED](#technology-implemented)
+      - [Language](#language)
+      - [Framework and Tools](#framework-and-tools)
+  * [BUGS & ISSUES](#bugs---issues)
+      - [W3C -HTML](#w3c--html)
+      - [W3C - CSS](#w3c---css)
+      - [JSHINT](#jshint)
+  * [DEPLOYMENT](#deployment)
+  * [CREDITS](#credits)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 ## USER STORY
 
 #### The user will want to use an application that:
@@ -235,7 +267,7 @@ https://api.jquery.com/toggleClass/#:~:text=toggleClass(%20classNames%2C%20state
 
 8) Answer cards were breaking up after using JavaScript hover codes with a boolean flag to stop it from hovering after click. Decided to remove the boolean flag and the app functionality returned to normal.
 
-9) Issues with using the two link on the bottom of the body html. 
+9) Issues with using the two link on the bottom of the body html. Moving the jQuery link to the lower part of the html page had caused my site to stop working.
 
 <script src="https://kit.fontawesome.com/11af3b4277.js" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
@@ -286,90 +318,9 @@ Guidance on toggle class with boolean logic
 
 https://api.jquery.com/toggleClass/#:~:text=toggleClass(%20classNames%2C%20state%20),-classNames&text=Type%3A%20Array-,An%20array%20of%20classes%20to%20be%20toggled,element%20in%20the%20matched%20set.&text=Type%3A%20Boolean-,A%20boolean%20(not%20just%20truthy%2Ffalsy)%20value%20to%20determine,should%20be%20added%20or%20removed.
 
-MDN guidance on div 
+MDN guidance on turning a div into a button.
 
 https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-                                 
-
-
-
-
-
-
-
-
-
-
-
-
-
-___________________________________________________________________________________________________
-
-hr
-
-fonts <script src="https://kit.fontawesome.com/11af3b4277.js" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-
-
-
-
-
-
-
-
-
-credits:
-
 https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
-
-issues 
-
-1 moving the jquery link to near the footer had caused the website to break. Thus moved backed
-
 

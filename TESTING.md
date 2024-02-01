@@ -71,6 +71,10 @@ Actual result: As expected with Brave and Chrome browsers.
 
 <img src = 'assets/user_testing/5usertesting.png'>
 
+The reponsiveness of the website on different devices:
+
+<img src = 'assets/readme_images/readme2/amiresponsive.jpg'>
+
 
 
 
