@@ -23,6 +23,10 @@ const questions = [
     question: 'Which vegetable can grow in the dark?',
     options: ['Brussel Sprout', 'Mushroom', 'Cabbage', 'Tomato'],
     answer: 'b'},
+    {
+    question: 'Which gold fruit is on top of St. Paul\'s Cathedral?',
+    options: ['Pineapple', 'Melon', 'Grapes', 'Orange'],
+    answer: 'a'},
 ];
 
 
@@ -102,8 +106,8 @@ document.addEventListener("DOMContentLoaded", function() {
         feedbackBox.addEventListener('mouseout', revertcoloursHover);
     }
     
-});
-    
+});    
+
 
 //startGame function() display instruction with start button - hide display for next page - set scores to zero
 
@@ -202,7 +206,7 @@ function close_question_feedback_box_right() {
     $(document).ready(function(){
         $(".question_feedback_box").addClass("display_none");
         $(".tick").addClass("display_none");        
-      });
+    });
 }
 
 // Set up relevant display board showing feedback to user  
@@ -212,7 +216,7 @@ function setup_question_feedback_box_wrong() {
         $(".question_feedback_box").removeClass("display_none");
         $(".xmark").removeClass("display_none");
         $("#feedback").text("Wrong");        
-      });
+    });
 }
 
 // lose relevant display board showing feedback to user
@@ -221,10 +225,10 @@ function close_question_feedback_box_wrong() {
     $(document).ready(function(){
         $(".question_feedback_box").addClass("display_none");
         $(".xmark").addClass("display_none");        
-      });
+    });
 }
 
-// reset Fontawesome to default value
+// reset Fontawesome to default value - toggleClass guidance came from jQuery documentation
 
 function resetFontawesome() {
     $(document).ready(function(){
