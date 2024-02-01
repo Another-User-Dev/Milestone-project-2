@@ -42,14 +42,13 @@ set_displayScoreboard();
 setScoreboard(); 
 
 // Wait for the DOM to finish loading before running the game
-// Get the button elements and add event listeners to them
+// Get Div elements and add event listeners to them
 
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByClassName("feedback");
-  
+    
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            //buttonLetter = this.getAttribute("data-type");
             buttonLetter = this.dataset.next;           
                 if (buttonLetter === "next_question") {
                     resetFontawesome();
@@ -70,9 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
                   reset_answer_cards();
                  restartGame();                   
                 }
-        });  
-      
-
+        });      
     }
 
     let cards = document.getElementsByClassName("box");
@@ -100,7 +97,6 @@ document.addEventListener("DOMContentLoaded", function() {
     let feedbackBoxes = document.getElementsByClassName("feedback");
 
     for (let feedbackBox of feedbackBoxes) {
-        console.log("hovering")
         feedbackBox.addEventListener('mouseover', changecoloursHover);
         feedbackBox.addEventListener('mouseout', revertcoloursHover);
     }
@@ -154,6 +150,7 @@ function checkAnswers () {
 }
 
 // turn the card with correct option to green
+
 function setColour_card () {
     let answerLetter = "";
     answerLetter = questions[questionCount].answer;

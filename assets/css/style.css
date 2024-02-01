@@ -71,7 +71,6 @@
     height: 4rem;
     width: 50%;
     color: white;
-    font-family: roboto serif;
     font-weight: 100;
     background-color: purple;
     padding-left: 0px;
@@ -86,7 +85,6 @@
     background-color: purple;
     padding-right: 0px;
     font-size: 1.2rem;
-    font-family: roboto serif;
     font-weight: 100;
 }
 
@@ -298,7 +296,7 @@
     width: 50%;
     text-align: left;
     height: auto;
-    display: block-inline;
+    display: inline-block;
 }
 
 .score_board_right {
@@ -306,7 +304,7 @@
     width: 50%;
     text-align: right;
     height: auto;
-    display: block-inline;
+    display: inline-block;
 }
 
 #question_card {
@@ -319,7 +317,7 @@
     display: block;
 }
 .flex-container {
-    flex-wrap: none;
+    flex-wrap: wrap;
     }
 
 .box {
@@ -374,7 +372,7 @@
 }
 
 .question_feedback_box {
-    margin: 0, auto; 
+    margin: 0 auto; 
     padding-left: 0px;
     margin-top: 25px;
     height: 3rem;
@@ -402,6 +400,17 @@
 } 
 }
 
+.btn2 {
+    padding: 8px;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    display: inline-block;
+}
 
+a.btn2 {
+    text-decoration: none;
+  }
 
-
+  
