@@ -52,23 +52,23 @@
         <div class="question_box" id="question_card"></div>           
 
             <div class="flex-container">
-                <div class="box" id="box_a" data-id = "a" role="button">                    
+                <div class="box" id="box_a" data-id = "a" role="button" aria-pressed="false" >                    
                     <div id="card_a"></div>
                 </div>
-                <div class="box" id="box_b" data-id = "b" role="button">
+                <div class="box" id="box_b" data-id = "b" role="button" aria-pressed="false" >
                     <div id="card_b"></div>
                 </div>
-                <div class="box" id="box_c" data-id = "c" role="button">
+                <div class="box" id="box_c" data-id = "c" role="button" aria-pressed="false" >
                     <div id="card_c"></div>
                 </div>
-                <div class="box" id="box_d" data-id = "d" role="button">
+                <div class="box" id="box_d" data-id = "d" role="button" aria-pressed="false" >
                     <div id="card_d"></div>
                 </div>
             </div>
 
     <!--.......Box for giving feedback for question................-->
 
-        <div class = "question_feedback_box feedback display_none" data-next = "next_question" role="button" >
+        <div class = "question_feedback_box feedback display_none" data-next = "next_question" role="button" aria-pressed="false" >
             
             <br>
             <div class="display_inarow centre">
@@ -87,7 +87,7 @@
 
         <!--.......Box for giving feedback on final score................-->
 
-        <div class="quiz_ended feedback display_none" data-next = "replay_quiz" role="button">
+        <div class="quiz_ended feedback display_none" data-next = "replay_quiz" role="button" aria-pressed="false" >
             <div class = "display_inarow2">
                 <br>Your final score is: <span id="final_score">0</span>
             </div>

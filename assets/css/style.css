@@ -60,6 +60,8 @@
     margin: 0 auto;
 }
 
+/*..... styling for score board area.......*/
+
 .score_board {
     height: 4rem;
     width: 100%;
@@ -87,6 +89,8 @@
     font-size: 1.2rem;
     font-weight: 100;
 }
+
+/*.... styling for question box and answer option boxes */
 
 .question_box {
     margin: 0 auto;
@@ -139,13 +143,7 @@
     font-size: 2rem;
 }
 
-/*....for use with classes to switch off display....*/
-
-.display_none {
-    display: none;
-}
-
-/*...........question feedback to user boxes .........*/
+/*...........styling question feedback box .........*/
 
 .question_feedback_box {
     margin: auto;
@@ -168,6 +166,8 @@
     width: 50%; 
 } 
 
+/*...........styling end of quiz feedback box .........*/
+
 .quiz_ended {
     margin: auto;
     margin-top: 25px;
@@ -185,21 +185,18 @@
     line-height: 2rem;
 } 
 
-/*..........styling answer button and position.....*/
+/*..........styling a fake div button for feedback boxes.....*/
 
-#button2 {
-    width: 80px;
-    height: 35px;
+.btn2 {
+    padding: 8px;
+    background-color: white;
+    color: black;
     border-radius: 8px;
     font-size: 1.2rem;
+    display: inline-block;
 }
 
-#button3 {
-    width: 150px;
-    height: 35px;
-    border-radius: 8px;
-    font-size: 1.2rem;
-}
+/*..........styling footer section.....*/
 
 #end_footer {
     position: absolute;
@@ -211,7 +208,7 @@
     text-align: center;
 }
 
-/*..........styling fontawesome fonts.....*/
+/*..........styling fontawesome fonts .....*/
 
 .tick {
     margin: auto;
@@ -236,9 +233,17 @@
     width: 30%; 
 } 
 
+/*....for use with classes to switch off display....*/
+
+.display_none {
+    display: none;
+}
+
 /*.........media query for smaller screen..........*/
 
 @media screen and (max-width: 600px) {
+
+/*...styling header...*/
 
 .top_header {
     width: 100%;
@@ -271,6 +276,8 @@
         display: block;
 }
 
+/* ...... styling main quiz area.....*/
+
 .main_page {
     width: 100%;
     background-color: #f5f5f5;
@@ -284,6 +291,8 @@
     background-color: whitesmoke;
     margin: 0 auto;
 }
+
+/* ...... styling scoreboard area.....*/
 
 .score_board {
     height: auto;
@@ -306,6 +315,8 @@
     height: auto;
     display: inline-block;
 }
+
+/* ...... styling question card and answer options.....*/
 
 #question_card {
     text-align: left;
@@ -339,37 +350,7 @@
     font-size: 1rem;
 }
 
-#end_footer {
-    font-size: x-small;
-}
-
-/* experimental */
-
-.tick {
-    font-size: 100%;
-    width: 1rem;
-    height: 1rem;
-}
-
-.xmark {
-    font-size: 100%;
-    width: 1rem;
-    height: 1rem;
-}
-
-#button2 {
-    width: 50px;
-    height: 20px;
-    border-radius: 8px;
-    font-size: 10px;
-}
-
-#button3 {
-    width: 80px;
-    height: 20px;
-    border-radius: 8px;
-    font-size: 10px;
-}
+/* ...... styling question feedback box.....*/
 
 .question_feedback_box {
     margin: 0 auto; 
@@ -381,6 +362,8 @@
     border-color: black;
     background-color: #ffa500;
 }
+
+/* ...... styling end of quiz feedback box.....*/
 
 .quiz_ended {
     margin: auto;
@@ -397,20 +380,39 @@
     width: 45%;
     text-align: center;
     line-height: 1rem;
-} 
 }
+
+/* ...... styling footer area.....*/
+
+#end_footer {
+    font-size: x-small;
+}
+
+/* styling for fontawesome icons */
+
+.tick {
+    font-size: 100%;
+    width: 1rem;
+    height: 1rem;
+}
+
+.xmark {
+    font-size: 100%;
+    width: 1rem;
+    height: 1rem;
+}
+
+/*..........styling a fake div button for feedback boxes.....*/
 
 .btn2 {
     padding: 8px;
     background-color: white;
     color: black;
     border-radius: 8px;
-    font-size: 1.2rem;
+    font-size: 0.6rem;
     display: inline-block;
 }
+} 
 
-a.btn2 {
-    text-decoration: none;
-  }
 
   

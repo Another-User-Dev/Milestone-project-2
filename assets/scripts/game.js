@@ -43,6 +43,7 @@ setScoreboard();
 
 // Wait for the DOM to finish loading before running the game
 // Get Div elements and add event listeners to them
+// Main loop for setting up questions, answer options, question feedback and replay quiz.
 
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByClassName("feedback");
@@ -73,7 +74,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     let cards = document.getElementsByClassName("box");
-
     for (let card of cards) {
         card.addEventListener("mouseover", changecoloursCardhover);
         card.addEventListener("mouseout", revertcoloursCardhover);
@@ -93,9 +93,10 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     } 
+
+    // Set up listeners for JavaScript mouse hover 
     
     let feedbackBoxes = document.getElementsByClassName("feedback");
-
     for (let feedbackBox of feedbackBoxes) {
         feedbackBox.addEventListener('mouseover', changecoloursHover);
         feedbackBox.addEventListener('mouseout', revertcoloursHover);
@@ -170,8 +171,7 @@ function setColour_card () {
 
 // The two functions below give feedback on answered question
 
-function rightAnswer() {
-   
+function rightAnswer() {   
     setup_question_feedback_box_right();     
 }
 
